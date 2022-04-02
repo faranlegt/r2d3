@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: Run Down
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -2029094677, guid: 29d4989ec09ce445f83f873ac9bd0315, type: 3}
+  - {fileID: 1953723717, guid: 29d4989ec09ce445f83f873ac9bd0315, type: 3}
+  - {fileID: -2049343212, guid: 29d4989ec09ce445f83f873ac9bd0315, type: 3}
+  - {fileID: 906837511, guid: 29d4989ec09ce445f83f873ac9bd0315, type: 3}
+  - {fileID: 1202715096, guid: 29d4989ec09ce445f83f873ac9bd0315, type: 3}
+  - {fileID: -369718844, guid: 29d4989ec09ce445f83f873ac9bd0315, type: 3}
+  - {fileID: 655027080, guid: 29d4989ec09ce445f83f873ac9bd0315, type: 3}
+  - {fileID: -1820149275, guid: 29d4989ec09ce445f83f873ac9bd0315, type: 3}
