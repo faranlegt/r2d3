@@ -12,19 +12,16 @@ namespace Ld50.Core.Characters
         public bool isInTransport;
         public bool canMove;
 
-        public float jumpDuration = 1f;
-        public float jumpHeight = 0.5f;
-
-        public SpritesLine jump;
-
         public Transport currentTransport;
 
         private LineAnimator _animator;
         private SpriteRenderer _renderer;
         private Collider2D _collider;
+        private Character _character;
 
         private void Awake()
         {
+            _character = GetComponent<Character>();
             _animator = GetComponent<LineAnimator>();
             _renderer = GetComponent<SpriteRenderer>();
             _collider = GetComponent<Collider2D>();
@@ -37,6 +34,7 @@ namespace Ld50.Core.Characters
                     c => c.gameObject.CompareTag("Transport")
                          && Input.GetKey(KeyCode.Z)
                          && !isInTransport
+                         && !_character.isAutoMoving
                 )
                 .Do(c => Enter(c.gameObject.GetComponent<Transport>()))
                 .Subscribe()
@@ -69,11 +67,13 @@ namespace Ld50.Core.Characters
             isInTransport = true;
             _collider.enabled = false;
 
-            Jump(transport.jumpTarget.position)
+            _character
+                .Jump(transport.jumpTarget.position)
                 .DoOnCompleted(
                     () =>
                     {
                         _renderer.enabled = false;
+
                         transport
                             .Launch()
                             .Do(
@@ -103,13 +103,14 @@ namespace Ld50.Core.Characters
                         _collider.enabled = true;
                         _renderer.enabled = true;
 
-                        Jump(targetPos)
+                        _character
+                            .Jump(targetPos)
                             .DoOnCompleted(
                                 () =>
                                 {
                                     _animator.animate = true;
                                     _animator.loop = true;
-                                    
+
                                     isInTransport = false;
                                 }
                             )
@@ -123,28 +124,5 @@ namespace Ld50.Core.Characters
             currentTransport = null;
             canMove = false;
         }
-
-        private IObservable<Unit> Jump(Vector3 endPos)
-        {
-            _animator.StartLine(jump, loop: false);
-
-            var startPos = transform.position;
-            var t = 0f;
-
-            return Observable
-                .EveryUpdate()
-                .TakeUntil(Observable.Timer(TimeSpan.FromSeconds(jumpDuration)))
-                .Do(
-                    _ =>
-                    {
-                        t += Time.deltaTime / jumpDuration;
-                        transform.position = JumpInterpolate(startPos, endPos, t);
-                    }
-                )
-                .AsUnitObservable();
-        }
-
-        private Vector3 JumpInterpolate(Vector3 a, Vector3 b, float t) =>
-            Vector3.Lerp(a, b, t) + Vector3.up * jumpHeight * Mathf.Sin(t * Mathf.PI);
     }
 }

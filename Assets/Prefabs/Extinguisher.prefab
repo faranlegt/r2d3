@@ -172,11 +172,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f91fffe27734bf1ae69dc0abdf57875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2.5
+  jumpDuration: 0.5
+  jumpHeight: 0.5
+  isAutoMoving: 0
   idle: {fileID: 11400000, guid: 2d4163f40f47e45b29dc18e8a2860d09, type: 2}
   up: {fileID: 11400000, guid: 67fa927fd462347b193d1e66a2a6cec5, type: 2}
   left: {fileID: 11400000, guid: af044b9a07a1a4a54a93fc7a18e8abe0, type: 2}
   right: {fileID: 11400000, guid: d30d58ec7d98b4ee3be6ff93bef8bfe7, type: 2}
   down: {fileID: 11400000, guid: 7a8f3908d1c4f4bf7a8de2bea5a9035d, type: 2}
+  jump: {fileID: 0}
 --- !u!58 &2746691264696271489
 CircleCollider2D:
   m_ObjectHideFlags: 0

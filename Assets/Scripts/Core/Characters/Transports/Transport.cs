@@ -11,8 +11,6 @@ namespace Ld50.Core.Characters.Transports
 
         public SpritesLine launch, stop, waiting;
 
-        public float speed = 2.5f;
-
         public bool isActing;
 
         protected Character Character;
@@ -58,7 +56,7 @@ namespace Ld50.Core.Characters.Transports
                 .Do(_ => Animator.StartLine(waiting, loop: true));
         }
 
-        public void SetDirection(Direction d)
+        public void SetDirection(Vector2 d)
         {
             if (isActing)
                 return;
@@ -71,7 +69,7 @@ namespace Ld50.Core.Characters.Transports
             if (isActing)
                 return;
 
-            Rigidbody.MovePosition(Rigidbody.position + direction.normalized * speed * Time.fixedDeltaTime);
+            Character.Move(direction);
         }
 
         public void Action()

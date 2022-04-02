@@ -28,34 +28,23 @@ namespace Ld50.Core.Characters
 
         private void Update()
         {
-            if (_transportController.isInTransport && !_transportController.canMove)
+            if (_player.isAutoMoving || (_transportController.isInTransport && !_transportController.canMove))
                 return;
 
-            var directionRounded = Direction.None;
             _direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-            if (_direction.sqrMagnitude > 0.1)
-            {
-                var angle = Mathf.Atan2(_direction.x, _direction.y) * Mathf.Rad2Deg;
-
-                if (angle < 0)
-                    angle += 360f;
-
-
-                directionRounded = (Direction)Mathf.FloorToInt(angle / 90f);
-            }
-            else
+            if (_direction.sqrMagnitude <= 0.1)
             {
                 _direction = Vector2.zero;
             }
 
             if (_transportController.isInTransport)
             {
-                _transportController.currentTransport.SetDirection(directionRounded);
+                _transportController.currentTransport.SetDirection(_direction);
             }
             else
             {
-                _player.SetDirection(directionRounded);
+                _player.SetDirection(_direction);
             }
         }
 
@@ -66,11 +55,11 @@ namespace Ld50.Core.Characters
 
             if (_transportController.isInTransport)
             {
-                _transportController.currentTransport.Move(_direction.normalized);
+                _transportController.currentTransport.Move(_direction);
             }
             else
             {
-                _rigidbody.MovePosition(_rigidbody.position + _direction.normalized * speed * Time.fixedDeltaTime);
+                _player.Move(_direction);
             }
         }
     }
