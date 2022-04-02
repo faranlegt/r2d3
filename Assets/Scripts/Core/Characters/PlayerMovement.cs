@@ -10,25 +10,25 @@ namespace Ld50.Core.Characters
     [RequireComponent(typeof(TransportController))]
     public class PlayerMovement : MonoBehaviour
     {
-        public float speed = 1f;
-
         private Vector2 _direction;
 
         private Character _player;
-        private Rigidbody2D _rigidbody;
         private TransportController _transportController;
+        private SocketController _socket;
 
 
         private void Awake()
         {
+            _socket = GetComponent<SocketController>();
             _player = GetComponent<Character>();
-            _rigidbody = GetComponent<Rigidbody2D>();
             _transportController = GetComponent<TransportController>();
         }
 
         private void Update()
         {
-            if (_player.isAutoMoving || (_transportController.isInTransport && !_transportController.canMove))
+            if (_player.isAutoMoving
+                || _socket.isInSocket
+                || (_transportController.isInTransport && !_transportController.canMove))
                 return;
 
             _direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -50,7 +50,9 @@ namespace Ld50.Core.Characters
 
         private void FixedUpdate()
         {
-            if ((_transportController.isInTransport && !_transportController.canMove) || _direction.sqrMagnitude < 0.1f)
+            if ((_transportController.isInTransport && !_transportController.canMove)
+                || _socket.isInSocket
+                || _direction.sqrMagnitude < 0.1f)
                 return;
 
             if (_transportController.isInTransport)

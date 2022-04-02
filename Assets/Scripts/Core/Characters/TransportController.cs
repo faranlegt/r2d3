@@ -18,9 +18,11 @@ namespace Ld50.Core.Characters
         private SpriteRenderer _renderer;
         private Collider2D _collider;
         private Character _character;
+        private SocketController _socket;
 
         private void Awake()
         {
+            _socket = GetComponent<SocketController>();
             _character = GetComponent<Character>();
             _animator = GetComponent<LineAnimator>();
             _renderer = GetComponent<SpriteRenderer>();
@@ -34,6 +36,7 @@ namespace Ld50.Core.Characters
                     c => c.gameObject.CompareTag("Transport")
                          && Input.GetKey(KeyCode.Z)
                          && !isInTransport
+                         && !_socket.isInSocket
                          && !_character.isAutoMoving
                 )
                 .Do(c => Enter(c.gameObject.GetComponent<Transport>()))

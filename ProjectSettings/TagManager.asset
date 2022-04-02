@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Transport
+  - Socket
   layers:
   - Default
   - TransparentFX
