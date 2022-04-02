@@ -26,19 +26,6 @@ namespace Ld50.Core.Characters
             _transportController = GetComponent<TransportController>();
         }
 
-        private void Start()
-        {
-            this.OnTriggerStay2DAsObservable()
-                .Where(
-                    c => c.gameObject.CompareTag("Transport")
-                         && Input.GetKey(KeyCode.Z)
-                         && !_transportController.isInTransport
-                )
-                .Do(c => _transportController.Enter(c.gameObject.GetComponent<Transport>()))
-                .Subscribe()
-                .AddTo(this);
-        }
-
         private void Update()
         {
             if (_transportController.isInTransport && !_transportController.canMove)

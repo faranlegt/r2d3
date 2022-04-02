@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2121714418219177740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6490242882231843707}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6490242882231843707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121714418219177740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2524176570728654469}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2524176570728654466
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,6 +67,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3264632961313988187}
+  - {fileID: 6490242882231843707}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -121,7 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpTarget: {fileID: 3264632961313988187}
+  exitJumpTarget: {fileID: 6490242882231843707}
   launch: {fileID: 11400000, guid: d9512193798aa498a8776f8fe5093fd1, type: 2}
+  stop: {fileID: 11400000, guid: 6fed0251fc2a74270acbded38afdc1d6, type: 2}
+  waiting: {fileID: 11400000, guid: b7a56e6b6acc14a0f8f9e0f875faf77d, type: 2}
   speed: 2.5
 --- !u!114 &3773016557027542647
 MonoBehaviour:
@@ -137,8 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idle: {fileID: 11400000, guid: 2d4163f40f47e45b29dc18e8a2860d09, type: 2}
   up: {fileID: 11400000, guid: 67fa927fd462347b193d1e66a2a6cec5, type: 2}
-  left: {fileID: 11400000, guid: d30d58ec7d98b4ee3be6ff93bef8bfe7, type: 2}
-  right: {fileID: 11400000, guid: af044b9a07a1a4a54a93fc7a18e8abe0, type: 2}
+  left: {fileID: 11400000, guid: af044b9a07a1a4a54a93fc7a18e8abe0, type: 2}
+  right: {fileID: 11400000, guid: d30d58ec7d98b4ee3be6ff93bef8bfe7, type: 2}
   down: {fileID: 11400000, guid: 7a8f3908d1c4f4bf7a8de2bea5a9035d, type: 2}
 --- !u!58 &2746691264696271489
 CircleCollider2D:

@@ -37,6 +37,14 @@ namespace Ld50.Animations
             _revalidate = true;
         }
 
+        public void StartLine(SpritesLine line, bool? loop = null)
+        {
+            sprites = line;
+            animationFrame = 0;
+            animate = true;
+            this.loop = loop ?? this.loop;
+        }
+
         private void OnValidate()
         {
             _revalidate = true;

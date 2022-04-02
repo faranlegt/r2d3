@@ -1,6 +1,7 @@
 using System;
 using Ld50.Animations;
 using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
 namespace Ld50.Core.Characters
@@ -9,7 +10,7 @@ namespace Ld50.Core.Characters
     {
         public bool isInTransport;
         public bool canMove;
-        
+
         public float jumpDuration = 1f;
         public float jumpHeight = 0.5f;
 
@@ -28,30 +29,38 @@ namespace Ld50.Core.Characters
             _collider = GetComponent<Collider2D>();
         }
 
+        private void Start()
+        {
+            this.OnTriggerStay2DAsObservable()
+                .Where(
+                    c => c.gameObject.CompareTag("Transport")
+                         && Input.GetKey(KeyCode.Z)
+                         && !isInTransport
+                )
+                .Do(c => Enter(c.gameObject.GetComponent<Transport>()))
+                .Subscribe()
+                .AddTo(this);
+        }
+
+        private void Update()
+        {
+            if (!canMove)
+                return;
+
+            transform.position = currentTransport.transform.position;
+
+            if (Input.GetKey(KeyCode.X))
+            {
+                Exit();
+            }
+        }
+
         public void Enter(Transport transport)
         {
             isInTransport = true;
-
             _collider.enabled = false;
-            
-            _animator.sprites = jump;
-            _animator.loop = false;
-            _animator.animationFrame = 0;
 
-            var startPos = transform.position;
-            var endPos = transport.jumpTarget.position;
-            var t = 0f;
-
-            Observable
-                .EveryUpdate()
-                .TakeUntil(Observable.Timer(TimeSpan.FromSeconds(jumpDuration)))
-                .Do(
-                    _ =>
-                    {
-                        t += Time.deltaTime / jumpDuration;
-                        transform.position = JumpInterpolate(startPos, endPos, t);
-                    }
-                )
+            Jump(transport.jumpTarget.position)
                 .DoOnCompleted(
                     () =>
                     {
@@ -63,22 +72,67 @@ namespace Ld50.Core.Characters
                                 {
                                     canMove = true;
                                     currentTransport = transport;
-                                })
+                                }
+                            )
                             .Subscribe()
                             .AddTo(this);
-
                     }
                 )
                 .Subscribe()
                 .AddTo(this);
         }
 
-        private void Update()
+        public void Exit()
         {
-            if (canMove)
-            {
-                transform.position = currentTransport.transform.position;
-            }
+            var targetPos = currentTransport.exitJumpTarget.position;
+
+            currentTransport
+                .Stop()
+                .Do(
+                    _ =>
+                    {
+                        _collider.enabled = true;
+                        _renderer.enabled = true;
+
+                        Jump(targetPos)
+                            .DoOnCompleted(
+                                () =>
+                                {
+                                    _animator.animate = true;
+                                    _animator.loop = true;
+                                    
+                                    isInTransport = false;
+                                }
+                            )
+                            .Subscribe()
+                            .AddTo(this);
+                    }
+                )
+                .Subscribe()
+                .AddTo(this);
+
+            currentTransport = null;
+            canMove = false;
+        }
+
+        private IObservable<Unit> Jump(Vector3 endPos)
+        {
+            _animator.StartLine(jump, loop: false);
+
+            var startPos = transform.position;
+            var t = 0f;
+
+            return Observable
+                .EveryUpdate()
+                .TakeUntil(Observable.Timer(TimeSpan.FromSeconds(jumpDuration)))
+                .Do(
+                    _ =>
+                    {
+                        t += Time.deltaTime / jumpDuration;
+                        transform.position = JumpInterpolate(startPos, endPos, t);
+                    }
+                )
+                .AsUnitObservable();
         }
 
         private Vector3 JumpInterpolate(Vector3 a, Vector3 b, float t) =>

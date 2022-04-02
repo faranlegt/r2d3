@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Walk Left
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 1077817867, guid: 004a75d45fc284e398b27b3401490896, type: 3}
-  - {fileID: 1631049428, guid: 004a75d45fc284e398b27b3401490896, type: 3}
-  - {fileID: 277384950, guid: 004a75d45fc284e398b27b3401490896, type: 3}
-  - {fileID: -456965477, guid: 004a75d45fc284e398b27b3401490896, type: 3}
-  - {fileID: 1068228437, guid: 004a75d45fc284e398b27b3401490896, type: 3}
-  - {fileID: 906814943, guid: 004a75d45fc284e398b27b3401490896, type: 3}
-  - {fileID: 1260057010, guid: 004a75d45fc284e398b27b3401490896, type: 3}
   - {fileID: 1281496152, guid: 004a75d45fc284e398b27b3401490896, type: 3}
+  - {fileID: 1260057010, guid: 004a75d45fc284e398b27b3401490896, type: 3}
+  - {fileID: 906814943, guid: 004a75d45fc284e398b27b3401490896, type: 3}
+  - {fileID: 1068228437, guid: 004a75d45fc284e398b27b3401490896, type: 3}
+  - {fileID: -456965477, guid: 004a75d45fc284e398b27b3401490896, type: 3}
+  - {fileID: 277384950, guid: 004a75d45fc284e398b27b3401490896, type: 3}
+  - {fileID: 1631049428, guid: 004a75d45fc284e398b27b3401490896, type: 3}
+  - {fileID: 1077817867, guid: 004a75d45fc284e398b27b3401490896, type: 3}

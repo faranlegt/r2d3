@@ -8,12 +8,12 @@ namespace Ld50.Core.Characters
 {
     public class Transport : MonoBehaviour
     {
-        public Transform jumpTarget;
+        public Transform jumpTarget, exitJumpTarget;
 
-        public SpritesLine launch;
+        public SpritesLine launch, stop, waiting;
 
         public float speed = 2.5f;
-        
+
         private Character _character;
         private LineAnimator _animator;
         private Rigidbody2D _rigidbody;
@@ -29,10 +29,7 @@ namespace Ld50.Core.Characters
 
         public IObservable<Unit> Launch()
         {
-            _animator.sprites = launch;
-            _animator.animationFrame = 0;
-            _animator.loop = false;
-            _animator.animate = true;
+            _animator.StartLine(launch, loop: false);
 
             return _animator
                 .OnAnimationEnd
@@ -40,15 +37,24 @@ namespace Ld50.Core.Characters
                 .Do(
                     _ =>
                     {
-                        _animator.animate = true;
-                        _animator.loop = true;
-                        _animator.animationFrame = 0;
+                        _animator.StartLine(launch, loop: true);
 
                         _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
-                        
-                        _character.SetDirection(Direction.None);
                     }
                 );
+        }
+
+        public IObservable<Unit> Stop()
+        {
+            _animator.StartLine(stop, loop: false);
+            _animator.loop = false;
+
+            _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            return _animator
+                .OnAnimationEnd
+                .Take(1)
+                .Do(_ => _animator.StartLine(waiting, loop: true));
         }
 
         public void SetDirection(Direction d)
