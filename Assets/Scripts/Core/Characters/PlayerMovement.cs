@@ -1,8 +1,6 @@
-using System;
-using UniRx;
 using UnityEngine;
 
-namespace Ld50.Core
+namespace Ld50.Core.Characters
 {
     [RequireComponent(typeof(Player))]
     [RequireComponent(typeof(Rigidbody2D))]

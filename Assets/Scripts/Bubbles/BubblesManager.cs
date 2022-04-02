@@ -1,7 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace Ld50.Core
+namespace Ld50.Bubbles
 {
     public class BubblesManager : MonoBehaviour
     {

@@ -1,8 +1,7 @@
-using System;
 using Ld50.Animations;
 using UnityEngine;
 
-namespace Ld50.Core
+namespace Ld50.Core.Characters
 {
     public class Player : MonoBehaviour
     {

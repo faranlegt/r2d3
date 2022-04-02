@@ -1,4 +1,4 @@
-namespace Ld50.Core
+namespace Ld50.Core.Characters
 {
     public enum Direction
     {
