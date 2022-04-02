@@ -21,7 +21,7 @@ namespace Ld50.Core
         public void Update()
         {
             var directionRounded = Direction.None;
-            var direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            var direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
             if (direction.sqrMagnitude > 0.1)
             {
@@ -41,14 +41,6 @@ namespace Ld50.Core
             }
 
             _player.SetDirection(directionRounded);
-        }
-
-        private void OnDrawGizmos()
-        {
-            var pos = transform.position;
-            var direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
-            Gizmos.DrawLine(pos, pos + (Vector3)direction.normalized);
         }
     }
 }
