@@ -1,5 +1,6 @@
 using System;
 using Ld50.Animations;
+using Ld50.Core.Characters.Transports;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
@@ -52,6 +53,14 @@ namespace Ld50.Core.Characters
             if (Input.GetKey(KeyCode.X))
             {
                 Exit();
+            }
+            else if (Input.GetKey(KeyCode.Z))
+            {
+                currentTransport.Action();
+            }
+            else
+            {
+                currentTransport.NoAction();
             }
         }
 
