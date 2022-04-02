@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -533939774, guid: bfe9f8b60645046e7b9a4f85940dc68b, type: 3}
+  - {fileID: -927880190, guid: bfe9f8b60645046e7b9a4f85940dc68b, type: 3}
+  - {fileID: 1190788006, guid: bfe9f8b60645046e7b9a4f85940dc68b, type: 3}
+  - {fileID: 2104199334, guid: bfe9f8b60645046e7b9a4f85940dc68b, type: 3}
+  - {fileID: -1688599380, guid: bfe9f8b60645046e7b9a4f85940dc68b, type: 3}
+  - {fileID: -984098796, guid: bfe9f8b60645046e7b9a4f85940dc68b, type: 3}
+  - {fileID: -1077403891, guid: bfe9f8b60645046e7b9a4f85940dc68b, type: 3}
+  - {fileID: 25066326, guid: bfe9f8b60645046e7b9a4f85940dc68b, type: 3}
