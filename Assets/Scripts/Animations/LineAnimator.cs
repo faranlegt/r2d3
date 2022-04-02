@@ -14,7 +14,7 @@ namespace Ld50.Animations
         public float frameLength = 1f;
 
         public IObservable<Unit> OnAnimationEnd => _animationEnd;
-        
+
         private SpriteRenderer _renderer;
         private SpritesLine _oldSprites;
 
@@ -67,7 +67,7 @@ namespace Ld50.Animations
         private void NextFrame()
         {
             _frameTime = 0;
-            if (animationFrame == sprites.sprites.Length - 1)
+            if (animationFrame >= sprites.sprites.Length - 1)
             {
                 if (loop)
                 {

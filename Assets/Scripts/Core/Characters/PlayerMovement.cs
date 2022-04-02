@@ -1,25 +1,49 @@
+using Ld50.Animations;
+using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
 namespace Ld50.Core.Characters
 {
-    [RequireComponent(typeof(Player))]
+    [RequireComponent(typeof(Character))]
     [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(TransportController))]
     public class PlayerMovement : MonoBehaviour
     {
         public float speed = 1f;
 
-        private Player _player;
-        private Rigidbody2D _rigidbody;
         private Vector2 _direction;
+
+        private Character _player;
+        private Rigidbody2D _rigidbody;
+        private TransportController _transportController;
+
 
         private void Awake()
         {
-            _player = GetComponent<Player>();
+            _player = GetComponent<Character>();
             _rigidbody = GetComponent<Rigidbody2D>();
+            _transportController = GetComponent<TransportController>();
         }
 
-        public void Update()
+        private void Start()
         {
+            this.OnTriggerStay2DAsObservable()
+                .Where(
+                    c => c.gameObject.CompareTag("Transport")
+                         && Input.GetKey(KeyCode.Z)
+                         && !_transportController.isInTransport
+                )
+                .Do(c => _transportController.Enter(c.gameObject.GetComponent<Transport>()))
+                .Subscribe()
+                .AddTo(this);
+        }
+
+        private void Update()
+        {
+            if (_transportController.isInTransport && !_transportController.canMove)
+                return;
+
             var directionRounded = Direction.None;
             _direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
@@ -38,14 +62,29 @@ namespace Ld50.Core.Characters
                 _direction = Vector2.zero;
             }
 
-            _player.SetDirection(directionRounded);
+            if (_transportController.isInTransport)
+            {
+                _transportController.currentTransport.SetDirection(directionRounded);
+            }
+            else
+            {
+                _player.SetDirection(directionRounded);
+            }
         }
 
         private void FixedUpdate()
         {
-            if (_direction.sqrMagnitude < 0.1f) return;
-            
-            _rigidbody.MovePosition(_rigidbody.position + _direction.normalized * speed * Time.fixedDeltaTime); 
+            if ((_transportController.isInTransport && !_transportController.canMove) || _direction.sqrMagnitude < 0.1f)
+                return;
+
+            if (_transportController.isInTransport)
+            {
+                _transportController.currentTransport.Move(_direction.normalized);
+            }
+            else
+            {
+                _rigidbody.MovePosition(_rigidbody.position + _direction.normalized * speed * Time.fixedDeltaTime);
+            }
         }
     }
 }

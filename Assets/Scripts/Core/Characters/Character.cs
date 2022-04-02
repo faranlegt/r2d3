@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Ld50.Core.Characters
 {
-    public class Player : MonoBehaviour
+    public class Character : MonoBehaviour
     {
         public SpritesLine idle, up, left, right, down;
 

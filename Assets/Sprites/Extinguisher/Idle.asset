@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
   m_Name: Idle
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 888490180, guid: 339f386fae8d447aba0df90b6c0f357d, type: 3}
+  - {fileID: 59879066, guid: 339f386fae8d447aba0df90b6c0f357d, type: 3}
+  - {fileID: -1514988497, guid: 339f386fae8d447aba0df90b6c0f357d, type: 3}
+  - {fileID: -569887346, guid: 339f386fae8d447aba0df90b6c0f357d, type: 3}
+  - {fileID: 1504948967, guid: 339f386fae8d447aba0df90b6c0f357d, type: 3}
+  - {fileID: -338315751, guid: 339f386fae8d447aba0df90b6c0f357d, type: 3}
+  - {fileID: -98785057, guid: 339f386fae8d447aba0df90b6c0f357d, type: 3}
+  - {fileID: -1818641274, guid: 339f386fae8d447aba0df90b6c0f357d, type: 3}
