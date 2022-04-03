@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7746031335822104977}
   - component: {fileID: 7746031335822104976}
   - component: {fileID: 7746031335822104979}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hole
   m_TagString: Hole
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7746031336711490284}
   - component: {fileID: 7746031336711490285}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

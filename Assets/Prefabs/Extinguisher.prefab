@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6490242882231843707}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 2746691264696271489}
   - component: {fileID: 7059204373892768533}
   - component: {fileID: 7561180266961213932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Extinguisher
   m_TagString: Transport
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -171,7 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fcfe166dcf48b7bc67c79a4f46be8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extinguishTime: 3
   extinguish: {fileID: 11400000, guid: 905f643f1125a42ce918f0a1b5d771d1, type: 2}
+  fires: []
 --- !u!114 &3773016557027542647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +225,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -234,7 +236,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &7561180266961213932
 Rigidbody2D:
@@ -266,7 +268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3264632961313988187}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jump target
   m_TagString: Untagged
   m_Icon: {fileID: 0}

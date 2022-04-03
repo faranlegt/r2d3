@@ -46,7 +46,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Internal_radius: 0
+    - _Blend_coef: 1.51
+    - _Internal_radius: 0.3
+    - _Outer_radius: 0.5
     m_Colors:
     - _Center: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
