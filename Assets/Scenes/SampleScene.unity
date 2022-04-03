@@ -2026,6 +2026,7 @@ GameObject:
   - component: {fileID: 1287167271}
   - component: {fileID: 1287167270}
   - component: {fileID: 1287167272}
+  - component: {fileID: 1287167275}
   - component: {fileID: 1287167273}
   - component: {fileID: 1287167274}
   m_Layer: 0
@@ -2159,6 +2160,59 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
+--- !u!68 &1287167275
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287167269}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.009863973, y: 11.801688}
+  - {x: 0.57601947, y: 11.458133}
+  - {x: 1.336807, y: 8.610448}
+  - {x: 4.242337, y: 7.0653205}
+  - {x: 8.555418, y: 5.88924}
+  - {x: 9.465697, y: 0.87879586}
+  - {x: 5.083426, y: 1.0636312}
+  - {x: 5.371877, y: 0.2022239}
+  - {x: 17.682192, y: -3.3113203}
+  - {x: 18.63152, y: -8.403064}
+  - {x: 13.997959, y: -8.056105}
+  - {x: 9.291685, y: -7.916355}
+  - {x: 5.403018, y: -7.8872094}
+  - {x: 4.833608, y: -8.165245}
+  - {x: 3.9165668, y: -10.433881}
+  - {x: 1.4416059, y: -10.406345}
+  - {x: 0.8820293, y: -9.8034525}
+  - {x: -0.7997613, y: -9.739259}
+  - {x: -1.4304479, y: -10.522529}
+  - {x: -3.86662, y: -10.527135}
+  - {x: -4.793892, y: -8.469375}
+  - {x: -5.176702, y: -7.991258}
+  - {x: -9.555675, y: -7.814906}
+  - {x: -18.593616, y: -8.328941}
+  - {x: -17.641392, y: -3.2896817}
+  - {x: -5.380044, y: 0.19989538}
+  - {x: -5.0578012, y: 1.0902922}
+  - {x: -9.431988, y: 0.8916137}
+  - {x: -8.538907, y: 5.847822}
+  - {x: -4.3210673, y: 7.0134444}
+  - {x: -1.3492368, y: 8.599891}
+  - {x: -0.55273306, y: 11.503292}
+  - {x: -0.073750794, y: 11.810869}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1317120062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,6 +3004,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4773107147021425493, guid: fe244ea89fa0443a2b4480cc5eb4d257, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8486612225928582439, guid: fe244ea89fa0443a2b4480cc5eb4d257, type: 3}
       propertyPath: m_Name
       value: Turret
