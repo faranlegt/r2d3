@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1157903460156899632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5761791179524520925}
+  m_Layer: 9
+  m_Name: Laser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5761791179524520925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157903460156899632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.961, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8486612227613445459}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8486612225928582439
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8486612225928582457}
   - component: {fileID: 8486612225928582456}
+  - component: {fileID: 6836354336576810378}
   m_Layer: 9
   m_Name: Turret
   m_TagString: Untagged
@@ -86,6 +118,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6836354336576810378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486612225928582439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae81f226d94bf4fe8b5e21d42bddae03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 5545887316446774340, guid: c52bef38653374e2bb440a59ce5be1fc, type: 3}
+  period: 3
+  isWorking: 0
+  blueLed: {fileID: 11400000, guid: e851311efdf7b47ebb7de30f3b2d1362, type: 2}
+  redLed: {fileID: 11400000, guid: ee8011370666345a4bd39370c3dedbb5, type: 2}
+  shoot: {fileID: 11400000, guid: 40ec5ad2711624ad4b4cf73830579f85, type: 2}
+  idle: {fileID: 11400000, guid: 4024f2d0b0f1e4f6fa514dc4724d9b12, type: 2}
+  ledAnimator: {fileID: 8486612226674117406}
+  towerAnimator: {fileID: 8486612227613445461}
+  laserStart: {fileID: 5761791179524520925}
+  tower: {fileID: 8486612227613445459}
 --- !u!1 &8486612226674117403
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +277,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8486612226674117404}
+  - {fileID: 5761791179524520925}
   m_Father: {fileID: 8486612225928582457}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

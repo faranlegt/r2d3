@@ -45,6 +45,13 @@ namespace Ld50.Animations
             this.loop = loop ?? this.loop;
         }
 
+        public IObservable<Unit> LaunchOnce(SpritesLine line)
+        {
+            StartLine(line, loop: false);
+
+            return OnAnimationEnd.Take(1);
+        }
+
         private void OnValidate()
         {
             _revalidate = true;
