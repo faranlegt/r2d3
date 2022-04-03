@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: Fire
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1611248685, guid: d7cb1ad2598de4837be0078226db869b, type: 3}
+  - {fileID: -2013183284, guid: d7cb1ad2598de4837be0078226db869b, type: 3}
+  - {fileID: -326917143, guid: d7cb1ad2598de4837be0078226db869b, type: 3}
+  - {fileID: -1816106749, guid: d7cb1ad2598de4837be0078226db869b, type: 3}
+  - {fileID: 1866422845, guid: d7cb1ad2598de4837be0078226db869b, type: 3}
+  - {fileID: -1127552911, guid: d7cb1ad2598de4837be0078226db869b, type: 3}

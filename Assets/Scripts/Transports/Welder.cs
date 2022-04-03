@@ -1,6 +1,6 @@
 using Ld50.Animations;
 
-namespace Ld50.Core.Characters.Transports
+namespace Ld50.Transports
 {
     public class Welder : Transport
     {

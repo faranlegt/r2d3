@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Transport
   - Socket
+  - Hole
   layers:
   - Default
   - TransparentFX

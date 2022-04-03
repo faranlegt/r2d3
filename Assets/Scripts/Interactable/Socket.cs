@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Ld50.Core
+namespace Ld50.Interactable
 {
     public class Socket : MonoBehaviour
     {

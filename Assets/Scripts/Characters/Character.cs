@@ -3,7 +3,7 @@ using Ld50.Animations;
 using UniRx;
 using UnityEngine;
 
-namespace Ld50.Core.Characters
+namespace Ld50.Characters
 {
     public class Character : MonoBehaviour
     {

@@ -1,11 +1,10 @@
-using System;
 using Ld50.Animations;
-using Ld50.Core.Characters.Transports;
+using Ld50.Transports;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 
-namespace Ld50.Core.Characters
+namespace Ld50.Characters
 {
     public class TransportController : MonoBehaviour
     {

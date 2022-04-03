@@ -1,9 +1,10 @@
 using System;
 using Ld50.Animations;
+using Ld50.Characters;
 using UniRx;
 using UnityEngine;
 
-namespace Ld50.Core.Characters.Transports
+namespace Ld50.Transports
 {
     public abstract class Transport : MonoBehaviour
     {
