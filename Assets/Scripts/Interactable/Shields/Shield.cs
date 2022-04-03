@@ -1,3 +1,4 @@
+using System;
 using Ld50.Animations;
 using UnityEngine;
 
@@ -5,6 +6,8 @@ namespace Ld50.Interactable.Shields
 {
     public class Shield : MonoBehaviour, IBreakable
     {
+        public float brakePower = 1;
+        
         public bool isBroken;
 
         public SpritesLine working, broken;
@@ -16,10 +19,12 @@ namespace Ld50.Interactable.Shields
         public bool IsBroken => isBroken;
 
         private LineAnimator _animator;
+        private Ship.Ship _ship;
 
         private void Awake()
         {
             _animator = GetComponent<LineAnimator>();
+            _ship = GetComponent<Ship.Ship>();
         }
 
         public void Brake()
@@ -44,6 +49,14 @@ namespace Ld50.Interactable.Shields
             shieldAura.enabled = true;
 
             _animator.StartLine(working, false);
+        }
+
+        private void Update()
+        {
+            if (isBroken)
+            {
+                _ship.Brake(brakePower * Time.deltaTime);
+            }
         }
     }
 }
