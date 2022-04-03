@@ -704,6 +704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Welder
       objectReference: {fileID: 0}
+    - target: {fileID: 2524176570728654468, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2524176570728654469, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -804,6 +808,7 @@ GameObject:
   - component: {fileID: 424138417}
   - component: {fileID: 424138418}
   - component: {fileID: 424138420}
+  - component: {fileID: 424138421}
   m_Layer: 0
   m_Name: hole_cap_left_front_1
   m_TagString: Untagged
@@ -890,6 +895,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &424138421
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424138416}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -5.3191967, y: 7.0112996}
+  - {x: -5.161561, y: 6.1022167}
+  - {x: -4.9869843, y: 4.7847457}
+  - {x: -4.584781, y: 4.101194}
+  - {x: -3.6064243, y: 4.061389}
+  - {x: -3.16953, y: 4.6424184}
+  - {x: -2.8057983, y: 5.2329574}
+  - {x: -2.2294617, y: 5.622947}
+  - {x: -1.7677474, y: 7.05199}
+  - {x: -1.4166653, y: 8.775101}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &466343507
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +937,7 @@ GameObject:
   - component: {fileID: 466343508}
   - component: {fileID: 466343509}
   - component: {fileID: 466343511}
+  - component: {fileID: 466343512}
   m_Layer: 0
   m_Name: hole_cap_right_front_2
   m_TagString: Untagged
@@ -987,6 +1024,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &466343512
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466343507}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 6.6680923, y: 6.5165615}
+  - {x: 6.86376, y: 5.6288104}
+  - {x: 7.091561, y: 4.683783}
+  - {x: 7.5513535, y: 3.9218478}
+  - {x: 8.424943, y: 3.6649432}
+  - {x: 9.416951, y: 3.795884}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1430,7 @@ GameObject:
   - component: {fileID: 715193245}
   - component: {fileID: 715193246}
   - component: {fileID: 715193248}
+  - component: {fileID: 715193249}
   m_Layer: 0
   m_Name: hole_cap_left_back_2
   m_TagString: Untagged
@@ -1452,6 +1517,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &715193249
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715193244}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -15.264421, y: -8.562823}
+  - {x: -15.249472, y: -7.130931}
+  - {x: -14.767667, y: -6.1849203}
+  - {x: -14.006955, y: -4.918983}
+  - {x: -13.218308, y: -3.9867444}
+  - {x: -11.386797, y: -4.170487}
+  - {x: -9.775562, y: -4.4344044}
+  - {x: -9.093753, y: -5.5832815}
+  - {x: -8.469723, y: -6.799956}
+  - {x: -8.016187, y: -8.215043}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &793484846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1559,7 @@ GameObject:
   - component: {fileID: 793484847}
   - component: {fileID: 793484848}
   - component: {fileID: 793484850}
+  - component: {fileID: 793484851}
   m_Layer: 0
   m_Name: hole_cap_right_back_2
   m_TagString: Untagged
@@ -1549,6 +1646,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &793484851
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793484846}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 13.356365, y: -1.9025311}
+  - {x: 13.368325, y: -3.2042325}
+  - {x: 13.583042, y: -4.44077}
+  - {x: 14.432114, y: -4.844431}
+  - {x: 15.064387, y: -4.5788445}
+  - {x: 15.540585, y: -3.9699626}
+  - {x: 15.891281, y: -3.8398256}
+  - {x: 16.845894, y: -3.8795223}
+  - {x: 17.874071, y: -3.973917}
+  - {x: 18.189054, y: -3.464076}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &863696877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1688,7 @@ GameObject:
   - component: {fileID: 863696878}
   - component: {fileID: 863696879}
   - component: {fileID: 863696881}
+  - component: {fileID: 863696882}
   m_Layer: 0
   m_Name: hole_cap_left_front_3
   m_TagString: Untagged
@@ -1646,6 +1775,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &863696882
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863696877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -9.36887, y: 4.4440637}
+  - {x: -9.022873, y: 4.3600707}
+  - {x: -8.862449, y: 4.1654425}
+  - {x: -8.312617, y: 4.0255866}
+  - {x: -7.5789804, y: 3.7309036}
+  - {x: -7.1986113, y: 2.9869719}
+  - {x: -6.886187, y: 2.3651757}
+  - {x: -6.843264, y: 1.1961994}
+  - {x: -6.6209683, y: 0.6225776}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &874488481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1907,7 @@ GameObject:
   - component: {fileID: 877203071}
   - component: {fileID: 877203072}
   - component: {fileID: 877203074}
+  - component: {fileID: 877203075}
   m_Layer: 0
   m_Name: hole_cap_left_back_1
   m_TagString: Untagged
@@ -1834,6 +1994,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &877203075
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877203070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -11.442523, y: -1.355354}
+  - {x: -10.44812, y: -2.9453514}
+  - {x: -8.99255, y: -3.6791832}
+  - {x: -6.882613, y: -3.2380524}
+  - {x: -6.543425, y: -2.6111364}
+  - {x: -6.4111385, y: -1.2142048}
+  - {x: -6.658983, y: -0.090357065}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1246477615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,6 +2117,7 @@ GameObject:
   - component: {fileID: 1261585377}
   - component: {fileID: 1261585378}
   - component: {fileID: 1261585380}
+  - component: {fileID: 1261585381}
   m_Layer: 0
   m_Name: hole_cap_right_back_3
   m_TagString: Untagged
@@ -2015,6 +2204,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &1261585381
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261585376}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 6.6933618, y: -0.051223576}
+  - {x: 6.7577157, y: -1.0950749}
+  - {x: 7.1023855, y: -2.2040272}
+  - {x: 7.5129147, y: -2.817586}
+  - {x: 8.315847, y: -2.8275373}
+  - {x: 8.871496, y: -3.2804785}
+  - {x: 9.468573, y: -3.9685082}
+  - {x: 9.809485, y: -4.682963}
+  - {x: 10.817348, y: -5.0304804}
+  - {x: 11.838697, y: -4.9986534}
+  - {x: 12.255855, y: -4.3096123}
+  - {x: 12.261394, y: -3.047139}
+  - {x: 12.341855, y: -1.9525571}
+  - {x: 12.495985, y: -1.5618782}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1287167269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,6 +2360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c19ace459554ce7a8d2ee0d9beadf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   caps:
   - {fileID: 877203074}
   - {fileID: 715193248}
@@ -2224,6 +2449,7 @@ GameObject:
   - component: {fileID: 1317120063}
   - component: {fileID: 1317120064}
   - component: {fileID: 1317120066}
+  - component: {fileID: 1317120067}
   m_Layer: 0
   m_Name: hole_cap_left_back_3
   m_TagString: Untagged
@@ -2310,6 +2536,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &1317120067
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317120062}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -18.653824, y: -6.518238}
+  - {x: -18.013197, y: -6.6764994}
+  - {x: -16.71663, y: -6.407616}
+  - {x: -16.04946, y: -5.3592286}
+  - {x: -15.612553, y: -3.861539}
+  - {x: -15.196922, y: -2.3285713}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1377223009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,6 +2574,7 @@ GameObject:
   - component: {fileID: 1377223010}
   - component: {fileID: 1377223011}
   - component: {fileID: 1377223013}
+  - component: {fileID: 1377223014}
   m_Layer: 0
   m_Name: hole_cap_right_front_3
   m_TagString: Untagged
@@ -2407,6 +2661,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &1377223014
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377223009}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 2.4251323, y: 8.20295}
+  - {x: 2.658088, y: 6.970352}
+  - {x: 2.8923926, y: 6.5440426}
+  - {x: 3.5619936, y: 6.2832384}
+  - {x: 4.063524, y: 5.54506}
+  - {x: 4.5939503, y: 5.0755725}
+  - {x: 4.7746286, y: 5.153104}
+  - {x: 5.071918, y: 5.168879}
+  - {x: 5.385253, y: 5.0119133}
+  - {x: 5.8342752, y: 5.545922}
+  - {x: 6.0285954, y: 6.2149324}
+  - {x: 5.920201, y: 6.7869043}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1736956539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,6 +2705,7 @@ GameObject:
   - component: {fileID: 1736956540}
   - component: {fileID: 1736956541}
   - component: {fileID: 1736956543}
+  - component: {fileID: 1736956544}
   m_Layer: 0
   m_Name: hole_cap_right_front_1
   m_TagString: Untagged
@@ -2504,6 +2792,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &1736956544
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736956539}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 5.121925, y: 0.8868815}
+  - {x: 4.3124895, y: 1.3297215}
+  - {x: 3.0664194, y: 2.1532803}
+  - {x: 3.0507684, y: 2.4857335}
+  - {x: 3.3791637, y: 3.0938818}
+  - {x: 3.7662103, y: 3.3015676}
+  - {x: 3.9313421, y: 3.7735162}
+  - {x: 4.2256327, y: 3.860345}
+  - {x: 4.557097, y: 3.4771237}
+  - {x: 5.1848564, y: 3.312506}
+  - {x: 5.8337483, y: 2.6637936}
+  - {x: 6.291888, y: 2.0437653}
+  - {x: 6.7469864, y: 0.9090282}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1786227930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,6 +2837,7 @@ GameObject:
   - component: {fileID: 1786227931}
   - component: {fileID: 1786227932}
   - component: {fileID: 1786227934}
+  - component: {fileID: 1786227935}
   m_Layer: 0
   m_Name: hole_cap_right_back_1
   m_TagString: Untagged
@@ -2601,6 +2924,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &1786227935
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786227930}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 10.222908, y: -8.070067}
+  - {x: 10.298538, y: -7.185404}
+  - {x: 10.967488, y: -6.3767858}
+  - {x: 12.485113, y: -5.9356008}
+  - {x: 13.890668, y: -5.794561}
+  - {x: 15.072319, y: -6.1341534}
+  - {x: 15.610221, y: -6.4457917}
+  - {x: 16.030474, y: -8.374533}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1787731745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2612,6 +2964,7 @@ GameObject:
   - component: {fileID: 1787731746}
   - component: {fileID: 1787731747}
   - component: {fileID: 1787731749}
+  - component: {fileID: 1787731750}
   m_Layer: 0
   m_Name: hole_cap_left_front_2
   m_TagString: Untagged
@@ -2698,6 +3051,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30dff8276f4477f8c3e6f8dbfadefca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBroken: 0
+--- !u!68 &1787731750
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787731745}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -6.5097075, y: 4.0409975}
+  - {x: -6.4917316, y: 4.094928}
+  - {x: -6.3119626, y: 4.202789}
+  - {x: -6.0802794, y: 4.2046027}
+  - {x: -5.9053617, y: 4.133535}
+  - {x: -5.6570907, y: 3.957852}
+  - {x: -5.207454, y: 3.736774}
+  - {x: -4.8941264, y: 3.1552763}
+  - {x: -4.9296026, y: 2.6292648}
+  - {x: -5.2483087, y: 2.294038}
+  - {x: -5.781387, y: 2.258111}
+  - {x: -6.3710704, y: 2.756731}
+  - {x: -6.6530776, y: 3.4932919}
+  - {x: -6.6300216, y: 3.8709207}
+  - {x: -6.448538, y: 4.068384}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1845986455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,9 +3279,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7456685804094438813, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7456685804756537736, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
       propertyPath: m_Name
       value: Fire accident
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456685804756537749, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456685804756537750, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
       propertyPath: m_RootOrder
@@ -2937,6 +3334,10 @@ PrefabInstance:
     - target: {fileID: 7456685804756537750, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456685804756537751, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
