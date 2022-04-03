@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: Teleport Out
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1124408180, guid: 7d3813e13c1e9433db131b4be76d952e, type: 3}
+  - {fileID: -1402081276, guid: 7d3813e13c1e9433db131b4be76d952e, type: 3}
+  - {fileID: -1100638554, guid: 7d3813e13c1e9433db131b4be76d952e, type: 3}
+  - {fileID: -1771638460, guid: 7d3813e13c1e9433db131b4be76d952e, type: 3}
+  - {fileID: -578170392, guid: 7d3813e13c1e9433db131b4be76d952e, type: 3}
+  - {fileID: 1634624265, guid: 7d3813e13c1e9433db131b4be76d952e, type: 3}
+  - {fileID: -1751379504, guid: 7d3813e13c1e9433db131b4be76d952e, type: 3}
+  - {fileID: 12379016, guid: 7d3813e13c1e9433db131b4be76d952e, type: 3}

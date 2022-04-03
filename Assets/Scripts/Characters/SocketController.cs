@@ -1,5 +1,6 @@
 using Ld50.Animations;
 using Ld50.Interactable;
+using Ld50.Interactable.Sockets;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
@@ -47,7 +48,7 @@ namespace Ld50.Characters
 
             if (Input.GetKey(KeyCode.Z))
             {
-                currentSocket.PowerUp();
+                currentSocket.PowerUp(this);
             }
             else if (Input.GetKey(KeyCode.X))
             {
@@ -74,6 +75,8 @@ namespace Ld50.Characters
                                 {
                                     currentSocket = socket;
                                     canPowerUp = true;
+                                    
+                                    currentSocket.PluggedIn(this);
                                 }
                             )
                             .Subscribe()
@@ -87,6 +90,7 @@ namespace Ld50.Characters
         private void PlugOut()
         {
             canPowerUp = false;
+            currentSocket.PluggedOut(this);
             currentSocket = null;
 
             _animator.StartLine(plugOut, loop: false);
@@ -99,6 +103,7 @@ namespace Ld50.Characters
                     {
                         isInSocket = false;
                         _animator.StartLine(_character.idle, loop: true);
+                        
                     }
                 )
                 .Subscribe()

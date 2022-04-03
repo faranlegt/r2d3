@@ -14,6 +14,8 @@ namespace Ld50.Core
 
         public Hole holePrefab;
 
+        public Turret mainTurret;
+
         public List<Transform> firePositions, holePositions;
 
         public Transform fireGroup, holeGroup;
@@ -47,6 +49,12 @@ namespace Ld50.Core
             holePositions.RemoveAt(placeIndex);
 
             Instantiate(holePrefab, pos, Quaternion.identity, holeGroup);
+        }
+
+
+        private void BrakeTurret()
+        {
+            mainTurret.Brake();
         }
 
         private void Update()
