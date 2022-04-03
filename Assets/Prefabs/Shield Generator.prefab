@@ -121,6 +121,7 @@ MonoBehaviour:
   working: {fileID: 11400000, guid: c1d9f8b3e35484a8dac467a5e8230079, type: 2}
   broken: {fileID: 11400000, guid: 7a856ba06458c46958fae790a13981da, type: 2}
   teleporter: {fileID: 8707466142983390417}
+  shieldAura: {fileID: 1133583982247334503}
 --- !u!1 &6031336084999145423
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Socket
       objectReference: {fileID: 0}
+    - target: {fileID: 8338130296927960140, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
+      propertyPath: breakable
+      value: 
+      objectReference: {fileID: 1523830814497486598}
     - target: {fileID: 8338130296927960142, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
       propertyPath: m_RootOrder
       value: 0

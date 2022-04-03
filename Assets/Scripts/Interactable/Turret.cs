@@ -24,7 +24,7 @@ namespace Ld50.Interactable
         public void Start()
         {
             isWorking = true;
-            
+
             Observable
                 .Interval(TimeSpan.FromSeconds(period))
                 .Delay(TimeSpan.FromSeconds(period / 2f))
@@ -63,12 +63,18 @@ namespace Ld50.Interactable
 
         public void Brake()
         {
+            if (IsBroken)
+                return;
+
             isWorking = false;
             ledAnimator.StartLine(redLed);
         }
 
         public void Fix()
         {
+            if (!IsBroken)
+                return;
+            
             isWorking = true;
             ledAnimator.StartLine(blueLed);
         }

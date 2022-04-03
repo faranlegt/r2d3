@@ -24,8 +24,11 @@ namespace Ld50.Interactable.Shields
 
         public void Brake()
         {
+            if (isBroken)
+                return;
+            
             isBroken = true;
-            teleporter.canTeleport = true;
+            teleporter.canTeleport = false;
             shieldAura.enabled = false;
 
             _animator.StartLine(broken, true);
@@ -33,8 +36,11 @@ namespace Ld50.Interactable.Shields
 
         public void Fix()
         {
+            if (!isBroken)
+                return;
+            
             isBroken = false;
-            teleporter.canTeleport = false;
+            teleporter.canTeleport = true;
             shieldAura.enabled = true;
 
             _animator.StartLine(working, false);

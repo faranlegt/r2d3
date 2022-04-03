@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Ld50.Interactable;
+using Ld50.Interactable.Shields;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -16,6 +17,8 @@ namespace Ld50.Core
 
         public Turret mainTurret;
 
+        public Shield[] shields;
+
         public List<Transform> firePositions, holePositions;
 
         public Transform fireGroup, holeGroup;
@@ -25,8 +28,10 @@ namespace Ld50.Core
         private void Awake()
         {
             _callbacks = new List<Callback> {
-                new(3, StartFire),
-                new(3, MakeHole),
+                new(30, StartFire),
+                new(30, MakeHole),
+                new(30, BrakeShield),
+                new(6, BrakeTurret),
             };
         }
 
@@ -51,11 +56,10 @@ namespace Ld50.Core
             Instantiate(holePrefab, pos, Quaternion.identity, holeGroup);
         }
 
+        private void BrakeShield() => shields[Random.Range(0, shields.Length)].Brake();
 
-        private void BrakeTurret()
-        {
-            mainTurret.Brake();
-        }
+
+        private void BrakeTurret() => mainTurret.Brake();
 
         private void Update()
         {
