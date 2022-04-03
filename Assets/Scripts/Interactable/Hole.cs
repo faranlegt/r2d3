@@ -1,39 +1,54 @@
 using System;
+using Ld50.Animations;
 using UnityEngine;
 
 namespace Ld50.Interactable
 {
     public class Hole : MonoBehaviour
     {
-        public Sprite repaired;
+        public float brakePower = 1f;
+        
+        public SpritesLine repaired, welding, waiting;
 
         public bool isBroken;
-
-        public SpriteRenderer tapeRenderer;
         
-        private SpriteRenderer _renderer;
+        private Ship.Ship _ship;
+        private LineAnimator _animator;
 
         private void Awake()
         {
-            _renderer = GetComponent<SpriteRenderer>();
+            _animator = GetComponent<LineAnimator>();
+            _ship = FindObjectOfType<Ship.Ship>();
 
             isBroken = true;
-            tapeRenderer.enabled = false;
+        }
+
+        public void StartWelding()
+        {
+            _animator.StartLine(welding);
+        }
+
+        public void StopWelding()
+        {
+            if (!isBroken) return;
+            
+            _animator.StartLine(waiting);
         }
 
         private void Update()
         {
             if (isBroken)
             {
-                // todo: brake ship continuously
+                _ship.Brake(brakePower * Time.deltaTime);
             }
         }
 
         public void Repair()
         {
+            if (!isBroken) return;
+            
             isBroken = false;
-            _renderer.sprite = repaired;
-            tapeRenderer.enabled = true;
+            _animator.StartLine(repaired);
         }
     }
 }

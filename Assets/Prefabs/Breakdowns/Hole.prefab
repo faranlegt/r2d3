@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7746031335822104977}
   - component: {fileID: 7746031335822104976}
   - component: {fileID: 7746031335822104979}
+  - component: {fileID: 5646884208630056389}
   m_Layer: 9
   m_Name: Hole
   m_TagString: Hole
@@ -30,8 +31,7 @@ Transform:
   m_LocalPosition: {x: 7.24, y: -4.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7746031336711490284}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f39d8ab31eda41d08adffef87855042, type: 3}
+  m_Sprite: {fileID: -1934938820, guid: 611fd369c14da4739b62400e67ade737, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,9 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9369f682bc84c41a60095e81c355381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repaired: {fileID: 21300000, guid: fbbc6b785de6c42da903325bd66d9515, type: 3}
+  brakePower: 1
+  repaired: {fileID: 11400000, guid: ac3ea7e9392344b20b0d56d9b09de9c1, type: 2}
+  welding: {fileID: 11400000, guid: f5f60601f4ca14141b5a2ebcce5540b3, type: 2}
+  waiting: {fileID: 11400000, guid: 4991f43612d714646ba3cdacdfb692b0, type: 2}
   isBroken: 0
-  tapeRenderer: {fileID: 7746031336711490285}
 --- !u!60 &7746031335822104979
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -119,7 +121,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.125, y: 1}
+    oldSize: {x: 1.5, y: 1.5}
     newSize: {x: 1.125, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -135,87 +137,20 @@ PolygonCollider2D:
       - {x: -0.08325338, y: -0.16584015}
       - {x: 0.34146023, y: 0.08296776}
       - {x: 0.5625, y: 0.5}
---- !u!1 &7746031336711490275
-GameObject:
+--- !u!114 &5646884208630056389
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7746031336711490284}
-  - component: {fileID: 7746031336711490285}
-  m_Layer: 9
-  m_Name: tape
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7746031336711490284
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7746031336711490275}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7746031335822104978}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7746031336711490285
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7746031336711490275}
+  m_GameObject: {fileID: 7746031335822104983}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5be8ccc0e96df4af387ab4be7c2575b7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.46875, y: 0.59375}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2b36d689a0b4f9cbeeaec89f74a452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites: {fileID: 11400000, guid: 4991f43612d714646ba3cdacdfb692b0, type: 2}
+  animationFrame: 0
+  loop: 1
+  animate: 1
+  frameLength: 0.1

@@ -18,7 +18,7 @@ namespace Ld50.Transports
         public float actionTime;
 
         public float repairTime = 2f;
-        
+
         private Character _character;
         private LineAnimator _animator;
         private Transport _transport;
@@ -38,19 +38,26 @@ namespace Ld50.Transports
                 .Do(holes.Add)
                 .Subscribe()
                 .AddTo(this);
-            
-            
+
+
             this.OnTriggerExit2DAsObservable()
                 .Where(c => c.gameObject.CompareTag("Hole"))
                 .Select(c => c.gameObject.GetComponent<Hole>())
-                .Do(h => holes.Remove(h))
+                .Do(
+                    h =>
+                    {
+                        h.StopWelding();
+                        holes.Remove(h);
+                    }
+                )
                 .Subscribe()
                 .AddTo(this);
         }
 
         private void Update()
         {
-            if (!_transport.isActing) return;
+            if (!_transport.isActing)
+                return;
 
             actionTime += Time.deltaTime;
 
@@ -60,7 +67,7 @@ namespace Ld50.Transports
                 {
                     hole.Repair();
                 }
-                
+
                 holes.Clear();
             }
         }
@@ -69,11 +76,21 @@ namespace Ld50.Transports
         {
             actionTime = 0;
             _animator.StartLine(welding, loop: true);
+
+            foreach (var hole in holes)
+            {
+                hole.StartWelding();
+            }
         }
 
         public void StopAction()
         {
             _animator.StartLine(_character.idle);
+
+            foreach (var hole in holes)
+            {
+                hole.StopWelding();
+            }
         }
     }
 }
