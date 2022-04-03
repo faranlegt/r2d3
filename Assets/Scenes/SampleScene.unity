@@ -2521,6 +2521,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1133583982247334503, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c42479d59eaf946e39a582ddf9952252, type: 3}
     - target: {fileID: 1184613008568697291, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2531,7 +2535,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1523830814497486598, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: m_Name
-      value: Shield Generator (2)
+      value: Shield Up)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9916374
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.1290552
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 14.83
       objectReference: {fileID: 0}
     - target: {fileID: 8707466142983390417, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: nextSocket
@@ -3379,6 +3411,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1133583982247334503, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c553e962100d747debe2736d3759c711, type: 3}
     - target: {fileID: 1184613008568697291, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.37
@@ -3389,7 +3425,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1523830814497486598, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: m_Name
-      value: Shield Generator (1)
+      value: Shield Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.28
       objectReference: {fileID: 0}
     - target: {fileID: 8707466142983390417, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: nextSocket
@@ -4139,6 +4183,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1133583982247334503, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f1fbdb1daf85147f788e59ff60fb4f4c, type: 3}
     - target: {fileID: 1184613008568697291, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.26
@@ -4149,7 +4197,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1523830814497486598, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: m_Name
-      value: Shield Generator
+      value: Shield Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.05
       objectReference: {fileID: 0}
     - target: {fileID: 8707466142983390417, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: nextSocket

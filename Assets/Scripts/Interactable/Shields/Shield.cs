@@ -11,6 +11,8 @@ namespace Ld50.Interactable.Shields
 
         public Teleporter teleporter;
 
+        public SpriteRenderer shieldAura;
+
         public bool IsBroken => isBroken;
 
         private LineAnimator _animator;
@@ -24,6 +26,7 @@ namespace Ld50.Interactable.Shields
         {
             isBroken = true;
             teleporter.canTeleport = true;
+            shieldAura.enabled = false;
 
             _animator.StartLine(broken, true);
         }
@@ -32,6 +35,7 @@ namespace Ld50.Interactable.Shields
         {
             isBroken = false;
             teleporter.canTeleport = false;
+            shieldAura.enabled = true;
 
             _animator.StartLine(working, false);
         }
