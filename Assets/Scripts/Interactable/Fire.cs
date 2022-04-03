@@ -7,10 +7,19 @@ namespace Ld50.Interactable
     {
         public float life = 1f;
 
+        public float brakePower = 1f;
+
         public bool isBroken;
 
         public Transform fire;
-        
+        private Ship.Ship _ship;
+
+
+        private void Awake()
+        {
+            _ship = FindObjectOfType<Ship.Ship>();
+        }
+
         private void Start()
         {
             isBroken = true;
@@ -35,7 +44,7 @@ namespace Ld50.Interactable
         {
             if (isBroken)
             {
-                // todo: brake ship continuously
+                _ship.Brake(brakePower * Time.deltaTime);
             }
         }
     }
