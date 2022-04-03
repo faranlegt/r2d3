@@ -704,10 +704,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Welder
       objectReference: {fileID: 0}
-    - target: {fileID: 2524176570728654468, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2524176570728654469, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2360,6 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c19ace459554ce7a8d2ee0d9beadf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brakeCoefficient: 0.001
   health: 1
   caps:
   - {fileID: 877203074}
@@ -3279,17 +3276,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7456685804094438813, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7456685804756537736, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
       propertyPath: m_Name
       value: Fire accident
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456685804756537749, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456685804756537750, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
       propertyPath: m_RootOrder
@@ -3334,10 +3323,6 @@ PrefabInstance:
     - target: {fileID: 7456685804756537750, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456685804756537751, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
@@ -3405,10 +3390,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4773107147021425493, guid: fe244ea89fa0443a2b4480cc5eb4d257, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8486612225928582439, guid: fe244ea89fa0443a2b4480cc5eb4d257, type: 3}
       propertyPath: m_Name
       value: Turret

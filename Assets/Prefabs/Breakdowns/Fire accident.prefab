@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
+  brakePower: 1
   isBroken: 0
   fire: {fileID: 7456685804094438815}
 --- !u!58 &2196308333554990182

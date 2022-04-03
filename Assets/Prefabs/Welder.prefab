@@ -172,6 +172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   welding: {fileID: 11400000, guid: bd6f0a678156d4505a8b9e58402d9b1d, type: 2}
+  holes: []
+  actionTime: 0
+  repairTime: 2
 --- !u!114 &3773016557027542647
 MonoBehaviour:
   m_ObjectHideFlags: 0
