@@ -12,9 +12,9 @@ namespace Ld50.Ship
         private void Awake()
         {
             _renderer = GetComponent<SpriteRenderer>();
-            // _collider = GetComponent<Collider2D>();
-            //
-            // _collider.enabled = false;
+            _collider = GetComponent<Collider2D>();
+
+            _collider.enabled = false;
         }
 
         public void Brake()
@@ -22,7 +22,7 @@ namespace Ld50.Ship
             if (isBroken) return;
             
             isBroken = true;
-            // _collider.enabled = true;
+            _collider.enabled = true;
             _renderer.enabled = false;
         }
 
@@ -31,7 +31,7 @@ namespace Ld50.Ship
             if (!isBroken) return;
 
             isBroken = false;
-            // _collider.enabled = false;
+            _collider.enabled = false;
             _renderer.enabled = true;
         }
     }
