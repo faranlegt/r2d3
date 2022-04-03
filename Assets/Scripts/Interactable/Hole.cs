@@ -17,7 +17,7 @@ namespace Ld50.Interactable
         {
             _renderer = GetComponent<SpriteRenderer>();
 
-            _renderer.enabled = false;
+            isBroken = true;
             tapeRenderer.enabled = false;
         }
 
@@ -27,12 +27,6 @@ namespace Ld50.Interactable
             {
                 // todo: brake ship continuously
             }
-        }
-
-        public void Activate()
-        {
-            _renderer.enabled = true;
-            isBroken = true;
         }
 
         public void Repair()

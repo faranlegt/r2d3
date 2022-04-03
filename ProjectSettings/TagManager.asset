@@ -7,6 +7,7 @@ TagManager:
   - Transport
   - Socket
   - Hole
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Background
   - 
   - 
   - 
@@ -41,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3398323185
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
