@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Ld50.Transports
 {
-    public abstract class Transport : MonoBehaviour
+    public class Transport : MonoBehaviour
     {
         public Transform jumpTarget, exitJumpTarget;
 
@@ -14,47 +14,49 @@ namespace Ld50.Transports
 
         public bool isActing;
 
-        protected Character Character;
-        protected LineAnimator Animator;
-        protected Rigidbody2D Rigidbody;
+        private Character _character;
+        private LineAnimator _animator;
+        private Rigidbody2D _rigidbody;
+        private ITransportAction _action;
 
         private void Awake()
         {
-            Animator = GetComponent<LineAnimator>();
-            Character = GetComponent<Character>();
-            Rigidbody = GetComponent<Rigidbody2D>();
+            _animator = GetComponent<LineAnimator>();
+            _character = GetComponent<Character>();
+            _rigidbody = GetComponent<Rigidbody2D>();
+            _action = GetComponent<ITransportAction>();
 
-            Rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
         public IObservable<Unit> Launch()
         {
-            Animator.StartLine(launch, loop: false);
+            _animator.StartLine(launch, loop: false);
 
-            return Animator
+            return _animator
                 .OnAnimationEnd
                 .Take(1)
                 .Do(
                     _ =>
                     {
-                        Animator.StartLine(launch, loop: true);
+                        _animator.StartLine(launch, loop: true);
 
-                        Rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+                        _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
                     }
                 );
         }
 
         public IObservable<Unit> Stop()
         {
-            Animator.StartLine(stop, loop: false);
-            Animator.loop = false;
+            _animator.StartLine(stop, loop: false);
+            _animator.loop = false;
 
-            Rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
-            return Animator
+            return _animator
                 .OnAnimationEnd
                 .Take(1)
-                .Do(_ => Animator.StartLine(waiting, loop: true));
+                .Do(_ => _animator.StartLine(waiting, loop: true));
         }
 
         public void SetDirection(Vector2 d)
@@ -62,7 +64,7 @@ namespace Ld50.Transports
             if (isActing)
                 return;
 
-            Character.SetDirection(d);
+            _character.SetDirection(d);
         }
 
         public void Move(Vector2 direction)
@@ -70,7 +72,7 @@ namespace Ld50.Transports
             if (isActing)
                 return;
 
-            Character.Move(direction);
+            _character.Move(direction);
         }
 
         public void Action()
@@ -79,7 +81,7 @@ namespace Ld50.Transports
             
             isActing = true;
 
-            StartAction();
+            _action.StartAction();
         }
 
         public void NoAction()
@@ -88,11 +90,7 @@ namespace Ld50.Transports
             
             isActing = false;
 
-            StopAction();
+            _action.StopAction();
         }
-
-        protected abstract void StopAction();
-
-        protected abstract void StartAction();
     }
 }

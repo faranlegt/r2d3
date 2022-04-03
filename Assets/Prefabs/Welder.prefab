@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 2524176570728654469}
   - component: {fileID: 2524176570728654468}
   - component: {fileID: 2524176570728654467}
+  - component: {fileID: 6641447978585189015}
   - component: {fileID: 5449507318540092796}
   - component: {fileID: 3773016557027542647}
   - component: {fileID: 2746691264696271489}
@@ -140,6 +141,24 @@ MonoBehaviour:
   loop: 1
   animate: 1
   frameLength: 0.1
+--- !u!114 &6641447978585189015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524176570728654466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19bd99cd27547de8293684767ee8b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpTarget: {fileID: 3264632961313988187}
+  exitJumpTarget: {fileID: 6490242882231843707}
+  launch: {fileID: 11400000, guid: 8ae863582dcd04d09880af45bdf1c585, type: 2}
+  stop: {fileID: 11400000, guid: 47a8177aff8e2422492bb2ccb3e1f9ac, type: 2}
+  waiting: {fileID: 11400000, guid: 4af2ac19130da4683bfbecd60153c96a, type: 2}
+  isActing: 0
 --- !u!114 &5449507318540092796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,12 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac5b042cb5d4fc2b48ea44083149300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpTarget: {fileID: 3264632961313988187}
-  exitJumpTarget: {fileID: 6490242882231843707}
-  launch: {fileID: 11400000, guid: 8ae863582dcd04d09880af45bdf1c585, type: 2}
-  stop: {fileID: 11400000, guid: 47a8177aff8e2422492bb2ccb3e1f9ac, type: 2}
-  waiting: {fileID: 11400000, guid: 4af2ac19130da4683bfbecd60153c96a, type: 2}
-  isActing: 0
   welding: {fileID: 11400000, guid: bd6f0a678156d4505a8b9e58402d9b1d, type: 2}
 --- !u!114 &3773016557027542647
 MonoBehaviour:
