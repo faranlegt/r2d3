@@ -30,8 +30,8 @@ namespace Ld50.Core
             _callbacks = new List<Callback> {
                 new(30, StartFire),
                 new(30, MakeHole),
-                new(30, BrakeShield),
-                new(6, BrakeTurret),
+                new(2, BrakeShield),
+                new(30, BrakeTurret),
             };
         }
 

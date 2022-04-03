@@ -46,11 +46,12 @@ namespace Ld50.Characters
             if (!canPowerUp)
                 return;
 
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 currentSocket.PowerUp(this);
             }
-            else if (Input.GetKey(KeyCode.X))
+            
+            if (Input.GetKeyDown(KeyCode.X))
             {
                 PlugOut();
             }

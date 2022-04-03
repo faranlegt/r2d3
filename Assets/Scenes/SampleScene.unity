@@ -2561,7 +2561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1523830814497486598, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: m_Name
-      value: Shield Up)
+      value: Shield Up
       objectReference: {fileID: 0}
     - target: {fileID: 8385615836947557054, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
       propertyPath: m_LocalPosition.x

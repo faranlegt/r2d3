@@ -19,7 +19,7 @@ namespace Ld50.Interactable.MiniGames
 
                 if (holdingFor >= timeToHold)
                 {
-                     Sucess();
+                     Success();
                 }
             }
             else

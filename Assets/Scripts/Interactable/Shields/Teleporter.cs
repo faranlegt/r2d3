@@ -33,7 +33,7 @@ namespace Ld50.Interactable.Shields
                     () =>
                     {
                         socketController.transform.position = nextSocket.transform.position;
-                        OnExited(socketController);
+                        socketController.currentSocket.PluggedOut(socketController);
 
                         animator
                             .LaunchOnce(teleportOut)
@@ -43,9 +43,7 @@ namespace Ld50.Interactable.Shields
                                     socketController.currentSocket = nextSocket;
                                     socketController.canPowerUp = true;
 
-                                    nextSocket
-                                        .GetComponent<ISocketAction>()
-                                        .OnEntered(socketController);
+                                    nextSocket.PluggedIn(socketController);
 
                                     isAnimating = false;
                                 }

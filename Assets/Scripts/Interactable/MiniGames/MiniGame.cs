@@ -4,7 +4,7 @@ namespace Ld50.Interactable.MiniGames
 {
     public class MiniGame : MonoBehaviour
     {
-        public SpriteRenderer tooltip;
+        public GameObject tooltip;
         
         public bool playing = false;
 
@@ -17,10 +17,10 @@ namespace Ld50.Interactable.MiniGames
             Breakable = breakable;
             playing = true;
 
-            tooltip.enabled = true;
+            tooltip.SetActive(true);
         }
 
-        public virtual void Sucess()
+        public virtual void Success()
         {
             if (!playing) return;
             
@@ -34,7 +34,7 @@ namespace Ld50.Interactable.MiniGames
             Breakable = null;
             playing = false;
 
-            tooltip.enabled = false;
+            tooltip.SetActive(false);
         }
     }
 }
