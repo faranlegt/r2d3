@@ -1069,7 +1069,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.296875
+  orthographic size: 4.1927085
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1330,7 +1330,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: cf44d80a963c54ffe9085463f8248ed6, type: 2}
   m_TargetDisplay: 0
@@ -3049,10 +3049,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4773107147021425493, guid: fe244ea89fa0443a2b4480cc5eb4d257, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8486612225928582439, guid: fe244ea89fa0443a2b4480cc5eb4d257, type: 3}
       propertyPath: m_Name
       value: Turret
