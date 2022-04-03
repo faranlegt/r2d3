@@ -1886,7 +1886,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":8400000,\"guid\":\"cf44d80a963c54ffe9085463f8248ed6\",\"type\":2}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -2060,7 +2060,7 @@
     "m_SourceType": 1,
     "m_FunctionName": "reflect",
     "m_FunctionSource": "",
-    "m_FunctionBody": "o = float2(1 - uv.x, 1 - uv.y);"
+    "m_FunctionBody": "o = uv;"
 }
 
 {
