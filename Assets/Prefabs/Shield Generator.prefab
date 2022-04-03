@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85fba1755a74d95be6694885c65518a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brakePower: 3
   isBroken: 0
   working: {fileID: 11400000, guid: c1d9f8b3e35484a8dac467a5e8230079, type: 2}
   broken: {fileID: 11400000, guid: 7a856ba06458c46958fae790a13981da, type: 2}

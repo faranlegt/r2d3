@@ -28,10 +28,10 @@ namespace Ld50.Core
         private void Awake()
         {
             _callbacks = new List<Callback> {
-                new(30, StartFire),
-                new(30, MakeHole),
-                new(2, BrakeShield),
-                new(30, BrakeTurret),
+                new(25, StartFire),
+                new(25, MakeHole),
+                new(45, BrakeShield),
+                new(45, BrakeTurret),
             };
         }
 
