@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Ld50.Interactable
 {
-    public class Turret : MonoBehaviour
+    public class Turret : MonoBehaviour, IBreakable
     {
         public Laser laserPrefab;
 
@@ -18,6 +18,8 @@ namespace Ld50.Interactable
         public LineAnimator ledAnimator, towerAnimator;
 
         public Transform laserStart, tower;
+
+        public bool IsBroken => !isWorking;
 
         public void Start()
         {
@@ -65,7 +67,7 @@ namespace Ld50.Interactable
             ledAnimator.StartLine(redLed);
         }
 
-        public void Fixed()
+        public void Fix()
         {
             isWorking = true;
             ledAnimator.StartLine(blueLed);
