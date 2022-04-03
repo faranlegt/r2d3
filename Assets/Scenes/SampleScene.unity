@@ -892,8 +892,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &424138421
-EdgeCollider2D:
+--- !u!60 &424138421
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -906,22 +906,26 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -5.3191967, y: 7.0112996}
-  - {x: -5.161561, y: 6.1022167}
-  - {x: -4.9869843, y: 4.7847457}
-  - {x: -4.584781, y: 4.101194}
-  - {x: -3.6064243, y: 4.061389}
-  - {x: -3.16953, y: 4.6424184}
-  - {x: -2.8057983, y: 5.2329574}
-  - {x: -2.2294617, y: 5.622947}
-  - {x: -1.7677474, y: 7.05199}
-  - {x: -1.4166653, y: 8.775101}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: -5.427865, y: 6.9319468}
+      - {x: -5.051258, y: 5.191746}
+      - {x: -4.889639, y: 4.5540433}
+      - {x: -4.4863787, y: 4.0745063}
+      - {x: -3.5906684, y: 4.033527}
+      - {x: -3.0313644, y: 4.803508}
+      - {x: -2.6581407, y: 5.277967}
+      - {x: -2.1730633, y: 5.6353064}
+      - {x: -1.3887254, y: 8.807755}
 --- !u!1 &466343507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,8 +1025,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &466343512
-EdgeCollider2D:
+--- !u!60 &466343512
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1035,18 +1039,23 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 6.6680923, y: 6.5165615}
-  - {x: 6.86376, y: 5.6288104}
-  - {x: 7.091561, y: 4.683783}
-  - {x: 7.5513535, y: 3.9218478}
-  - {x: 8.424943, y: 3.6649432}
-  - {x: 9.416951, y: 3.795884}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 7.1060925, y: 4.6259146}
+      - {x: 7.529899, y: 3.898697}
+      - {x: 8.435756, y: 3.652399}
+      - {x: 9.440011, y: 3.7826018}
+      - {x: 8.826838, y: 6.7344394}
+      - {x: 6.6559286, y: 6.50294}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,8 +1523,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &715193249
-EdgeCollider2D:
+--- !u!60 &715193249
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1528,22 +1537,24 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -15.264421, y: -8.562823}
-  - {x: -15.249472, y: -7.130931}
-  - {x: -14.767667, y: -6.1849203}
-  - {x: -14.006955, y: -4.918983}
-  - {x: -13.218308, y: -3.9867444}
-  - {x: -11.386797, y: -4.170487}
-  - {x: -9.775562, y: -4.4344044}
-  - {x: -9.093753, y: -5.5832815}
-  - {x: -8.469723, y: -6.799956}
-  - {x: -8.016187, y: -8.215043}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: -7.971838, y: -8.277168}
+      - {x: -8.576273, y: -6.2176104}
+      - {x: -9.754187, y: -4.344074}
+      - {x: -13.249535, y: -3.9505525}
+      - {x: -14.339253, y: -5.2931776}
+      - {x: -15.310187, y: -7.1019783}
+      - {x: -15.3199215, y: -8.3900585}
 --- !u!1 &793484846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,8 +1654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &793484851
-EdgeCollider2D:
+--- !u!60 &793484851
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1657,22 +1668,28 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 13.356365, y: -1.9025311}
-  - {x: 13.368325, y: -3.2042325}
-  - {x: 13.583042, y: -4.44077}
-  - {x: 14.432114, y: -4.844431}
-  - {x: 15.064387, y: -4.5788445}
-  - {x: 15.540585, y: -3.9699626}
-  - {x: 15.891281, y: -3.8398256}
-  - {x: 16.845894, y: -3.8795223}
-  - {x: 17.874071, y: -3.973917}
-  - {x: 18.189054, y: -3.464076}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 13.316086, y: -1.9197721}
+      - {x: 13.365604, y: -3.2657053}
+      - {x: 13.609115, y: -4.4729433}
+      - {x: 14.457541, y: -4.8866577}
+      - {x: 15.113868, y: -4.5360165}
+      - {x: 15.534351, y: -3.9527586}
+      - {x: 15.918605, y: -3.8247652}
+      - {x: 17.855545, y: -4.0168924}
+      - {x: 18.080063, y: -3.5981314}
+      - {x: 18.252512, y: -3.4445403}
+      - {x: 17.968687, y: -2.402194}
 --- !u!1 &863696877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,8 +1789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &863696882
-EdgeCollider2D:
+--- !u!60 &863696882
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1786,21 +1803,27 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -9.36887, y: 4.4440637}
-  - {x: -9.022873, y: 4.3600707}
-  - {x: -8.862449, y: 4.1654425}
-  - {x: -8.312617, y: 4.0255866}
-  - {x: -7.5789804, y: 3.7309036}
-  - {x: -7.1986113, y: 2.9869719}
-  - {x: -6.886187, y: 2.3651757}
-  - {x: -6.843264, y: 1.1961994}
-  - {x: -6.6209683, y: 0.6225776}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: -6.862389, y: 2.377015}
+      - {x: -7.5448937, y: 3.7530448}
+      - {x: -8.244936, y: 4.055238}
+      - {x: -8.879118, y: 4.189144}
+      - {x: -9.028785, y: 4.3904753}
+      - {x: -9.310911, y: 4.4452467}
+      - {x: -10.2102785, y: 0.7592046}
+      - {x: -10.160864, y: -0.057112694}
+      - {x: -6.5753045, y: 0.5523617}
+      - {x: -6.7998157, y: 1.1803958}
 --- !u!1 &874488481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,8 +2014,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &877203075
-EdgeCollider2D:
+--- !u!60 &877203075
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2005,19 +2028,24 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -11.442523, y: -1.355354}
-  - {x: -10.44812, y: -2.9453514}
-  - {x: -8.99255, y: -3.6791832}
-  - {x: -6.882613, y: -3.2380524}
-  - {x: -6.543425, y: -2.6111364}
-  - {x: -6.4111385, y: -1.2142048}
-  - {x: -6.658983, y: -0.090357065}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: -11.489186, y: -1.3935416}
+      - {x: -10.470156, y: -2.9960299}
+      - {x: -8.989048, y: -3.7293937}
+      - {x: -6.8608546, y: -3.3411422}
+      - {x: -6.5176687, y: -2.6041596}
+      - {x: -6.3504124, y: -1.1968014}
+      - {x: -6.667809, y: -0.034847736}
 --- !u!1 &1246477615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,8 +2229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &1261585381
-EdgeCollider2D:
+--- !u!60 &1261585381
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2215,26 +2243,31 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 6.6933618, y: -0.051223576}
-  - {x: 6.7577157, y: -1.0950749}
-  - {x: 7.1023855, y: -2.2040272}
-  - {x: 7.5129147, y: -2.817586}
-  - {x: 8.315847, y: -2.8275373}
-  - {x: 8.871496, y: -3.2804785}
-  - {x: 9.468573, y: -3.9685082}
-  - {x: 9.809485, y: -4.682963}
-  - {x: 10.817348, y: -5.0304804}
-  - {x: 11.838697, y: -4.9986534}
-  - {x: 12.255855, y: -4.3096123}
-  - {x: 12.261394, y: -3.047139}
-  - {x: 12.341855, y: -1.9525571}
-  - {x: 12.495985, y: -1.5618782}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 6.732108, y: -1.0831434}
+      - {x: 7.079677, y: -2.2244804}
+      - {x: 7.513026, y: -2.8366227}
+      - {x: 8.308942, y: -2.8132384}
+      - {x: 9.474868, y: -3.9236064}
+      - {x: 9.802176, y: -4.6991096}
+      - {x: 10.504208, y: -4.9696712}
+      - {x: 11.008993, y: -5.027708}
+      - {x: 11.864005, y: -5.011739}
+      - {x: 12.282081, y: -4.322861}
+      - {x: 12.264261, y: -3.031743}
+      - {x: 12.373032, y: -2.0205646}
+      - {x: 12.499078, y: -1.5990732}
+      - {x: 6.6857414, y: -0.061813593}
 --- !u!1 &1287167269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,8 +2567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &1317120067
-EdgeCollider2D:
+--- !u!60 &1317120067
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2548,18 +2581,24 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -18.653824, y: -6.518238}
-  - {x: -18.013197, y: -6.6764994}
-  - {x: -16.71663, y: -6.407616}
-  - {x: -16.04946, y: -5.3592286}
-  - {x: -15.612553, y: -3.861539}
-  - {x: -15.196922, y: -2.3285713}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: -18.013212, y: -2.4491315}
+      - {x: -18.191202, y: -3.152469}
+      - {x: -18.85691, y: -6.520184}
+      - {x: -18.031149, y: -6.687095}
+      - {x: -16.701065, y: -6.4455686}
+      - {x: -16.02441, y: -5.409621}
+      - {x: -15.208824, y: -2.4117062}
 --- !u!1 &1377223009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,8 +2698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &1377223014
-EdgeCollider2D:
+--- !u!60 &1377223014
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2673,24 +2712,29 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 2.4251323, y: 8.20295}
-  - {x: 2.658088, y: 6.970352}
-  - {x: 2.8923926, y: 6.5440426}
-  - {x: 3.5619936, y: 6.2832384}
-  - {x: 4.063524, y: 5.54506}
-  - {x: 4.5939503, y: 5.0755725}
-  - {x: 4.7746286, y: 5.153104}
-  - {x: 5.071918, y: 5.168879}
-  - {x: 5.385253, y: 5.0119133}
-  - {x: 5.8342752, y: 5.545922}
-  - {x: 6.0285954, y: 6.2149324}
-  - {x: 5.920201, y: 6.7869043}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 2.5896583, y: 6.9453635}
+      - {x: 2.888958, y: 6.5461397}
+      - {x: 3.539898, y: 6.2793393}
+      - {x: 4.0214257, y: 5.582664}
+      - {x: 4.602189, y: 5.047051}
+      - {x: 4.7805943, y: 5.1537485}
+      - {x: 5.0547175, y: 5.1412487}
+      - {x: 5.3893466, y: 4.962412}
+      - {x: 5.802694, y: 5.464612}
+      - {x: 6.0405006, y: 6.2031894}
+      - {x: 5.9213815, y: 6.7758627}
+      - {x: 2.409041, y: 8.257425}
 --- !u!1 &1736956539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2790,8 +2834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &1736956544
-EdgeCollider2D:
+--- !u!60 &1736956544
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2804,25 +2848,29 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 5.121925, y: 0.8868815}
-  - {x: 4.3124895, y: 1.3297215}
-  - {x: 3.0664194, y: 2.1532803}
-  - {x: 3.0507684, y: 2.4857335}
-  - {x: 3.3791637, y: 3.0938818}
-  - {x: 3.7662103, y: 3.3015676}
-  - {x: 3.9313421, y: 3.7735162}
-  - {x: 4.2256327, y: 3.860345}
-  - {x: 4.557097, y: 3.4771237}
-  - {x: 5.1848564, y: 3.312506}
-  - {x: 5.8337483, y: 2.6637936}
-  - {x: 6.291888, y: 2.0437653}
-  - {x: 6.7469864, y: 0.9090282}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 3.9230645, y: 3.8077264}
+      - {x: 3.7449505, y: 3.3287556}
+      - {x: 3.357598, y: 3.1281586}
+      - {x: 3.0397775, y: 2.5449607}
+      - {x: 3.0609345, y: 2.1661866}
+      - {x: 5.247106, y: 0.7713734}
+      - {x: 6.805568, y: 0.71495104}
+      - {x: 6.3049283, y: 2.0968385}
+      - {x: 5.8305182, y: 2.6806703}
+      - {x: 5.1632733, y: 3.3473368}
+      - {x: 4.5099783, y: 3.4921856}
+      - {x: 4.2038345, y: 3.9071298}
 --- !u!1 &1786227930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,8 +2970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &1786227935
-EdgeCollider2D:
+--- !u!60 &1786227935
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2936,20 +2984,25 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 10.222908, y: -8.070067}
-  - {x: 10.298538, y: -7.185404}
-  - {x: 10.967488, y: -6.3767858}
-  - {x: 12.485113, y: -5.9356008}
-  - {x: 13.890668, y: -5.794561}
-  - {x: 15.072319, y: -6.1341534}
-  - {x: 15.610221, y: -6.4457917}
-  - {x: 16.030474, y: -8.374533}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 16.023586, y: -8.406206}
+      - {x: 15.63088, y: -6.410177}
+      - {x: 15.128969, y: -6.122452}
+      - {x: 13.93588, y: -5.781773}
+      - {x: 12.542932, y: -5.9076786}
+      - {x: 10.988537, y: -6.33064}
+      - {x: 10.329294, y: -7.128537}
+      - {x: 10.109892, y: -8.285499}
 --- !u!1 &1787731745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,8 +3102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
---- !u!68 &1787731750
-EdgeCollider2D:
+--- !u!60 &1787731750
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3063,27 +3116,27 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 43.125, y: 38.65625}
+    newSize: {x: 43.125, y: 38.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -6.5097075, y: 4.0409975}
-  - {x: -6.4917316, y: 4.094928}
-  - {x: -6.3119626, y: 4.202789}
-  - {x: -6.0802794, y: 4.2046027}
-  - {x: -5.9053617, y: 4.133535}
-  - {x: -5.6570907, y: 3.957852}
-  - {x: -5.207454, y: 3.736774}
-  - {x: -4.8941264, y: 3.1552763}
-  - {x: -4.9296026, y: 2.6292648}
-  - {x: -5.2483087, y: 2.294038}
-  - {x: -5.781387, y: 2.258111}
-  - {x: -6.3710704, y: 2.756731}
-  - {x: -6.6530776, y: 3.4932919}
-  - {x: -6.6300216, y: 3.8709207}
-  - {x: -6.448538, y: 4.068384}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: -6.1054935, y: 4.235095}
+      - {x: -6.4702406, y: 4.101836}
+      - {x: -6.682445, y: 3.734971}
+      - {x: -6.411151, y: 2.7806735}
+      - {x: -5.8008223, y: 2.2345552}
+      - {x: -5.2011824, y: 2.2720292}
+      - {x: -4.903804, y: 2.5915394}
+      - {x: -4.8683248, y: 3.1237123}
+      - {x: -5.2011075, y: 3.7368863}
+      - {x: -5.7011075, y: 3.9834523}
 --- !u!1 &1845986455
 GameObject:
   m_ObjectHideFlags: 0
