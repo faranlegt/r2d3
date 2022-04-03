@@ -4,6 +4,8 @@ namespace Ld50.Ship
 {
     public class Cap : MonoBehaviour
     {
+        public bool isBroken;
+        
         private SpriteRenderer _renderer;
         private Collider2D _collider;
 
@@ -17,8 +19,20 @@ namespace Ld50.Ship
 
         public void Brake()
         {
-            _collider.enabled = true;
+            if (isBroken) return;
+            
+            isBroken = true;
+            // _collider.enabled = true;
             _renderer.enabled = false;
+        }
+
+        public void Fix()
+        {
+            if (!isBroken) return;
+
+            isBroken = false;
+            // _collider.enabled = false;
+            _renderer.enabled = true;
         }
     }
 }
