@@ -4,6 +4,8 @@ namespace Ld50.Ship
 {
     public class Ship : MonoBehaviour
     {
+        public float brakeCoefficient = 0.001f;
+        
         [Range(0, 1f)]
         public float health = 1f;
         
@@ -24,6 +26,11 @@ namespace Ld50.Ship
                     caps[i].Fix();
                 }
             }
+        }
+
+        public void Brake(float power)
+        {
+            health -= power * brakeCoefficient;
         }
     }
 }
