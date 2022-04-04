@@ -1409,6 +1409,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8486612225928582457}
     m_Modifications:
+    - target: {fileID: 726822357723278699, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 726822357723278699, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 726822357723278699, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916553896194584395, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8338130296927960128, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
       propertyPath: m_Name
       value: Socket
@@ -1460,6 +1476,10 @@ PrefabInstance:
     - target: {fileID: 8338130296927960142, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424179141680735473, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
+      propertyPath: distance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0450b525d31944d191a189bfadb1e5e, type: 3}
