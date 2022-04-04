@@ -19,6 +19,8 @@ namespace Ld50.Characters
         private Character _character;
         private LineAnimator _animator;
 
+        public AudioSource plugInSound, plugOutSound;
+
         private void Awake()
         {
             _character = GetComponent<Character>();
@@ -61,6 +63,7 @@ namespace Ld50.Characters
 
         private void PlugIn(Socket socket)
         {
+            plugInSound.Play();
             isInSocket = true;
 
             _character
@@ -92,6 +95,8 @@ namespace Ld50.Characters
 
         private void PlugOut()
         {
+            plugOutSound.Play();
+
             canPowerUp = false;
             currentSocket.PluggedOut(this);
             currentSocket = null;

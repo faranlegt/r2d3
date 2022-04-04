@@ -19,6 +19,8 @@ namespace Ld50.Characters
         private Character _character;
         private SocketController _socket;
 
+        public AudioSource plugInSound, plugOutSound;
+
         private void Awake()
         {
             _socket = GetComponent<SocketController>();
@@ -84,6 +86,7 @@ namespace Ld50.Characters
                                 {
                                     canMove = true;
                                     currentTransport = transport;
+                                    plugInSound.Play();
                                 }
                             )
                             .Subscribe()
@@ -115,6 +118,7 @@ namespace Ld50.Characters
                                     _animator.loop = true;
 
                                     isInTransport = false;
+                                    plugOutSound.Play();
                                 }
                             )
                             .Subscribe()

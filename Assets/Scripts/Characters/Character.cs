@@ -132,8 +132,11 @@ namespace Ld50.Characters
                 .AsUnitObservable();
         }
 
+        public AudioSource jumpSound;
         public IObservable<Unit> Jump(Vector3 endPos)
         {
+            jumpSound.Play();
+
             var oldSortLayer = _renderer.sortingOrder;
 
             _renderer.sortingOrder = oldSortLayer + 1;
