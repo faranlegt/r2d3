@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakable: {fileID: 0}
   owner: {fileID: 0}
+  hintExit: {fileID: 0}
+  hintBeam: {fileID: 0}
 --- !u!1001 &2256208377813306553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,6 +140,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d31a080d6ea3c43ba932599636e3888b, type: 3}
+    - target: {fileID: 1538428447074476498, guid: de97aefab6b38451a88b6a51a500336a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2196537470928453515, guid: de97aefab6b38451a88b6a51a500336a, type: 3}
       propertyPath: m_Name
       value: Hint

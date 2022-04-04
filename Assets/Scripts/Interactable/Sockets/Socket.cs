@@ -15,6 +15,8 @@ namespace Ld50.Interactable.Sockets
         private ISocketAction _action;
         private IBreakable _breakable;
 
+        public SpriteRenderer hintExit, hintBeam;
+
         public void Awake()
         {
             _breakable = null;
@@ -37,6 +39,8 @@ namespace Ld50.Interactable.Sockets
         {
             owner = socketController;
             _action.OnEntered(socketController);
+
+            hintExit.enabled = true;
         }
 
         public void PluggedOut(SocketController socketController)
@@ -44,14 +48,25 @@ namespace Ld50.Interactable.Sockets
             owner = null;
             _action.OnExited(socketController);
 
+            if (hintBeam)
+                hintBeam.enabled = false;
+
             if (_miniGame)
             {
                 _miniGame.Cancel();
             }
+
+            hintExit.enabled = false;
         }
 
         private void Update()
         {
+            if (hintBeam && owner)
+            {
+                hintBeam.enabled =
+                    breakable.GetComponent<Shields.Shield>().shieldAura.enabled;
+            }
+
             if (_miniGame && breakable && _breakable.IsBroken && owner)
             {
                 _miniGame.Launch(_breakable);
