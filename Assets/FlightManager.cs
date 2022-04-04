@@ -24,7 +24,7 @@ namespace Ld50
 
         void Update()
         {
-            noiseT += 0.001f;
+            noiseT += 0.003f;
 
             var noise1 = Mathf.PerlinNoise(noiseT, 0) - 0.5f;
             var noise2 = Mathf.PerlinNoise(0, noiseT) - 0.5f;
@@ -35,7 +35,7 @@ namespace Ld50
             //    space.transform.rotation
             //);
 
-            space.transform.Rotate(0, 0, noise1 * 0.5f);
+            space.transform.Rotate(0, 0, noise1 * 2f);
             psFlow.transform.rotation = Quaternion.Euler(0, 0, noise1 * 50f);
 
             // CAMERA

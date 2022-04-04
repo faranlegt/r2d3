@@ -42,12 +42,16 @@ namespace Ld50.Characters
         {
             var frame = _animator.animationFrame;
             if (
-                _animator.sprites.name.Contains("Walk") &&
+                (
+                    _animator.sprites.name.Contains("Walk") ||
+                    _animator.sprites.name.Contains("Run")
+                ) &&
                 frame % 2 == 0 &&
                 _lastFrame != frame
                )
             {
-                _stepSound.volume = frame % 4 == 0 ? 1f : 0.5f;
+                _stepSound.pitch = 1f + UnityEngine.Random.Range(-0.1f, 0.1f);
+                _stepSound.volume = frame % 4 == 0 ? 0.7f : 0.4f;
                 _stepSound.Play();
             }
             _lastFrame = frame;
