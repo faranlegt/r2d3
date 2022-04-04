@@ -26,6 +26,8 @@ namespace Ld50.Interactable
 
         private float _noiseT = 0f;
 
+        public AudioSource laserSound;
+
         private void Awake()
         {
             _ship = FindObjectOfType<Ship.Ship>();
@@ -48,7 +50,10 @@ namespace Ld50.Interactable
         {
             Observable
                 .Timer(TimeSpan.FromSeconds(5 / 60f))
-                .DoOnCompleted(() => Instantiate(laserPrefab, laserStart.position, laserStart.rotation))
+                .DoOnCompleted(() => {
+                    Instantiate(laserPrefab, laserStart.position, laserStart.rotation);
+                    laserSound.Play();
+                    })
                 .Subscribe()
                 .AddTo(this);
             
