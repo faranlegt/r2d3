@@ -1,3 +1,7 @@
+using System;
+using Ld50.Characters;
+using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
 namespace Ld50.Ship
@@ -26,6 +30,14 @@ namespace Ld50.Ship
             isBroken = true;
             _collider.enabled = true;
             _renderer.enabled = false;
+
+            this.OnCollisionEnter2DAsObservable()
+                .Select(c => c.gameObject.TryGetComponent(out Character ch) ? ch : null)
+                .Where(c => c)
+                .TakeUntil(Observable.Timer(TimeSpan.FromSeconds(0.1f)))
+                .Do(c => c.transform.position = fallbackPoint.position)
+                .Subscribe()
+                .AddTo(this);
         }
 
         public void Fix()
