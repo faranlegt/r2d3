@@ -153,7 +153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1287167271}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &12258949
 AudioSource:
@@ -536,6 +536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1800848481}
   - {fileID: 703549678}
   - {fileID: 1246477617}
   m_Father: {fileID: 0}
@@ -571,7 +572,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1287167271}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &89863532
 AudioSource:
@@ -699,7 +700,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1287167271}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &94144260
 SpriteRenderer:
@@ -816,6 +817,10 @@ PrefabInstance:
       propertyPath: isSliding
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3773016557027542647, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
+      propertyPath: slideFriction
+      value: 0.992
+      objectReference: {fileID: 0}
     - target: {fileID: 9032862247284408420, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
       propertyPath: distance
       value: 1.35
@@ -925,7 +930,7 @@ Transform:
   - {fileID: 466343508}
   - {fileID: 1377223010}
   m_Father: {fileID: 1287167271}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &325132767
 GameObject:
@@ -1119,14 +1124,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -5.427865, y: 6.9319468}
-      - {x: -5.051258, y: 5.191746}
-      - {x: -4.889639, y: 4.5540433}
-      - {x: -4.4863787, y: 4.0745063}
-      - {x: -3.5906684, y: 4.033527}
-      - {x: -3.0313644, y: 4.803508}
-      - {x: -2.6581407, y: 5.277967}
-      - {x: -2.1730633, y: 5.6353064}
+    - - {x: -5.178819, y: 6.9734545}
+      - {x: -4.912899, y: 5.2885976}
+      - {x: -4.765116, y: 4.747746}
+      - {x: -4.417199, y: 4.2820444}
+      - {x: -3.5906684, y: 4.268737}
+      - {x: -3.1282158, y: 5.0525537}
+      - {x: -2.713484, y: 5.5685205}
+      - {x: -2.2837505, y: 5.912024}
       - {x: -1.3887254, y: 8.807755}
 --- !u!1 &428132784
 GameObject:
@@ -1708,7 +1713,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 85634539}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &715193244
 GameObject:
@@ -2162,16 +2167,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -6.862389, y: 2.377015}
-      - {x: -7.5448937, y: 3.7530448}
-      - {x: -8.244936, y: 4.055238}
-      - {x: -8.879118, y: 4.189144}
-      - {x: -9.028785, y: 4.3904753}
-      - {x: -9.310911, y: 4.4452467}
+    - - {x: -7.0699277, y: 2.266328}
+      - {x: -7.627909, y: 3.4763272}
+      - {x: -8.258772, y: 3.8476994}
+      - {x: -8.879118, y: 3.9400983}
+      - {x: -9.070292, y: 4.169101}
+      - {x: -9.324747, y: 4.3207235}
       - {x: -10.2102785, y: 0.7592046}
       - {x: -10.160864, y: -0.057112694}
-      - {x: -6.5753045, y: 0.5523617}
-      - {x: -6.7998157, y: 1.1803958}
+      - {x: -6.769007, y: 0.62154055}
+      - {x: -6.993518, y: 1.1250522}
 --- !u!114 &871151243 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1184613008568697289, guid: 43b3ed408fe704facb9591b5845ac991, type: 3}
@@ -2315,6 +2320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: {fileID: 1246477615}
   psFlow: {fileID: 1800848483}
+  mainCamera: {fileID: 519420031}
 --- !u!1 &877203070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,7 +2750,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 85634539}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1261585376
 GameObject:
@@ -3000,7 +3006,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1800848481}
   - {fileID: 94144259}
   - {fileID: 320646162}
   - {fileID: 12258948}
@@ -3956,16 +3961,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -6.1054935, y: 4.235095}
-      - {x: -6.4702406, y: 4.101836}
-      - {x: -6.682445, y: 3.734971}
-      - {x: -6.411151, y: 2.7806735}
-      - {x: -5.8008223, y: 2.2345552}
-      - {x: -5.2011824, y: 2.2720292}
-      - {x: -4.903804, y: 2.5915394}
-      - {x: -4.8683248, y: 3.1237123}
-      - {x: -5.2011075, y: 3.7368863}
-      - {x: -5.7011075, y: 3.9834523}
+    - - {x: -6.0778217, y: 4.041393}
+      - {x: -6.414897, y: 4.018821}
+      - {x: -6.5025787, y: 3.7626429}
+      - {x: -6.272792, y: 2.9190326}
+      - {x: -5.7593145, y: 2.4144216}
+      - {x: -5.270362, y: 2.4380596}
+      - {x: -5.0421624, y: 2.7298982}
+      - {x: -5.006684, y: 3.179056}
+      - {x: -5.256451, y: 3.5846915}
+      - {x: -5.7011075, y: 3.8450935}
 --- !u!1 &1800848480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,14 +3996,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800848480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 18.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalScale: {x: 0.4, y: 4.83, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1287167271}
+  m_Father: {fileID: 85634539}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0, y: 0, z: 0}
 --- !u!199 &1800848482
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4062,7 +4067,7 @@ ParticleSystemRenderer:
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -4707,7 +4712,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 62.6, y: 1.9, z: 1}
+    m_Scale: {x: 140, y: 1.9, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -5335,7 +5340,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -5343,7 +5348,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 1, b: 1, a: 0.43137255}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -5359,7 +5364,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
+        atime0: 386
         atime1: 65535
         atime2: 0
         atime3: 0
@@ -8808,7 +8813,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1287167271}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1845986457
 AudioSource:
