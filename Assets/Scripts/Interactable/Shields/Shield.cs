@@ -24,7 +24,7 @@ namespace Ld50.Interactable.Shields
         private void Awake()
         {
             _animator = GetComponent<LineAnimator>();
-            _ship = GetComponent<Ship.Ship>();
+            _ship = FindObjectOfType<Ship.Ship>();
         }
 
         public void Brake()
