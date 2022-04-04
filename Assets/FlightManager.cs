@@ -22,6 +22,8 @@ namespace Ld50
             psFlow.Play();
         }
 
+        int shakeTTL = 0;
+        float shakeStrength = 0;
         void Update()
         {
             noiseT += 0.003f;
@@ -44,6 +46,13 @@ namespace Ld50
 
             var camNoiseX = (Mathf.PerlinNoise(noiseT * 10, 0) - 0.5f) * 0.3f;
             var camNoiseY = (Mathf.PerlinNoise(0, noiseT * 10) - 0.5f) * 0.3f;
+
+            if (shakeTTL > 0)
+            {
+                shakeTTL--;
+                camNoiseX += UnityEngine.Random.Range(0, shakeStrength);
+                camNoiseY += UnityEngine.Random.Range(0, shakeStrength);
+            }
 
             _cameraFollower.offset = new Vector3(camNoiseX, camNoiseY, -10);
             
