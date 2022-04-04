@@ -431,7 +431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84040826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 35, z: 0}
+  m_LocalPosition: {x: 5.76, y: -2.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12987,10 +12987,11 @@ MonoBehaviour:
   player: {fileID: 84040830}
   gameStartPos: {fileID: 1558367128}
   gameEndPos: {fileID: 1564005341}
-  startDuration: 2
+  startDuration: 0.5
   isPlaying: 0
   gameStarting: 0
   gameOver: 0
+  waitRestart: 0
   explosion: {fileID: 158074029241810282, guid: 046982433fed84f35954a1ad840899c0, type: 3}
   firePrefab: {fileID: 7456685804756537749, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
   holePrefab: {fileID: 7746031335822104976, guid: 8c794f56c8e7144d491bee3b99f27c34, type: 3}

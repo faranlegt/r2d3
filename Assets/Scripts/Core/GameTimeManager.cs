@@ -36,10 +36,13 @@ namespace Ld50.Core
 
         private List<Callback> _callbacks; // (1 / float seconds) probability
 
+        private CameraFollower _cameraFollower;
+        
         private Ship.Ship _ship;
 
         private void Awake()
         {
+            _cameraFollower = FindObjectOfType<CameraFollower>();
             _ship = FindObjectOfType<Ship.Ship>();
             _callbacks = new List<Callback> {
                 new(25, StartFire),
@@ -47,6 +50,8 @@ namespace Ld50.Core
                 new(45, BrakeShield),
                 new(45, BrakeTurret),
             };
+
+            _cameraFollower.enabled = false;
         }
 
         private void StartFire()
@@ -92,7 +97,8 @@ namespace Ld50.Core
                         Instantiate(explosion, pos, Quaternion.identity);
                     }
 
-                    var startPos = player.transform.position;
+                    var startPos = _cameraFollower.transform.position;
+                    _cameraFollower.enabled = false;
                     var t = 0f;
 
                     Observable
@@ -101,7 +107,7 @@ namespace Ld50.Core
                         .Do(
                             _ =>
                             {
-                                player.transform.position = Vector3.Lerp(
+                                _cameraFollower.transform.position = Vector3.Lerp(
                                     startPos,
                                     gameEndPos.position,
                                     t / startDuration
@@ -150,7 +156,7 @@ namespace Ld50.Core
 
             gameStarting = true;
 
-            var startPos = player.transform.position;
+            var startPos = _cameraFollower.transform.position;
             var t = 0f;
 
             Observable
@@ -159,14 +165,14 @@ namespace Ld50.Core
                 .Do(
                     _ =>
                     {
-                        player.transform.position = Vector3.Lerp(startPos, gameStartPos.position, t / startDuration);
+                        _cameraFollower.transform.position = Vector3.Lerp(startPos, player.transform.position, t / startDuration);
                         t += Time.deltaTime;
                     }
                 )
                 .DoOnCompleted(
                     () =>
                     {
-                        player.transform.position = gameStartPos.position;
+                        _cameraFollower.enabled = true;
                         player.GetComponent<Collider2D>().enabled = true;
                         isPlaying = true;
                         gameStarting = false;
