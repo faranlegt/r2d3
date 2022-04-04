@@ -5,6 +5,7 @@ using Ld50.Interactable;
 using Ld50.Interactable.Shields;
 using UniRx;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 namespace Ld50.Core
@@ -13,13 +14,13 @@ namespace Ld50.Core
     {
         public PlayerMovement player;
 
-        public Transform gameStartPos;
+        public Transform gameStartPos, gameEndPos;
 
         public float startDuration = 5f;
 
-        public bool isPlaying, gameStarting;
+        public bool isPlaying, gameStarting, gameOver, waitRestart;
 
-        public Camera playerCamera;
+        public Explosion explosion;
 
         public Fire firePrefab;
 
@@ -35,8 +36,11 @@ namespace Ld50.Core
 
         private List<Callback> _callbacks; // (1 / float seconds) probability
 
+        private Ship.Ship _ship;
+
         private void Awake()
         {
+            _ship = FindObjectOfType<Ship.Ship>();
             _callbacks = new List<Callback> {
                 new(25, StartFire),
                 new(25, MakeHole),
@@ -76,6 +80,46 @@ namespace Ld50.Core
             if (isPlaying)
             {
                 SpawnEvents();
+
+                if (_ship.health < 0)
+                {
+                    gameOver = true;
+                    isPlaying = false;
+
+                    for (int i = 0; i < 4; i++)
+                    {
+                        var pos = player.transform.position + (Vector3)Random.insideUnitCircle * 5f;
+                        Instantiate(explosion, pos, Quaternion.identity);
+                    }
+
+                    var startPos = player.transform.position;
+                    var t = 0f;
+
+                    Observable
+                        .EveryUpdate()
+                        .TakeUntil(Observable.Timer(TimeSpan.FromSeconds(startDuration)))
+                        .Do(
+                            _ =>
+                            {
+                                player.transform.position = Vector3.Lerp(
+                                    startPos,
+                                    gameEndPos.position,
+                                    t / startDuration
+                                );
+                                t += Time.deltaTime;
+                            }
+                        )
+                        .DoOnCompleted(() => waitRestart = true)
+                        .Subscribe()
+                        .AddTo(this);
+                }
+            }
+            else if (gameOver)
+            {
+                if (waitRestart && Input.anyKey)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
             }
             else
             {

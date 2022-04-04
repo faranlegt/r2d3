@@ -12986,10 +12986,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 84040830}
   gameStartPos: {fileID: 1558367128}
+  gameEndPos: {fileID: 1564005341}
   startDuration: 2
   isPlaying: 0
   gameStarting: 0
-  playerCamera: {fileID: 519420031}
+  gameOver: 0
+  explosion: {fileID: 158074029241810282, guid: 046982433fed84f35954a1ad840899c0, type: 3}
   firePrefab: {fileID: 7456685804756537749, guid: 85ac96b47e46b4e33a6b574208b35edd, type: 3}
   holePrefab: {fileID: 7746031335822104976, guid: 8c794f56c8e7144d491bee3b99f27c34, type: 3}
   mainTurret: {fileID: 1152718324}
@@ -19806,6 +19808,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1787731746}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1564005340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564005341}
+  m_Layer: 0
+  m_Name: End pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1564005341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564005340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.3848715, y: -37.7, z: -0.14249915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1587724789
 GameObject:

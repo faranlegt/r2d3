@@ -1,5 +1,6 @@
 using System;
 using Ld50.Characters;
+using Ld50.Interactable;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
@@ -15,7 +16,7 @@ namespace Ld50.Ship
 
         public Transform fallbackPoint, explosionPoint;
 
-        public Ld50.Interactable.Explosion explosionPrefab;
+        public Explosion explosionPrefab;
 
         private void Awake()
         {
