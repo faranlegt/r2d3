@@ -409,6 +409,7 @@ MonoBehaviour:
   isSliding: 0
   slideFriction: 0.98
   slideSpeed: 0
+  _stepSound: {fileID: 0}
 --- !u!50 &84040833
 Rigidbody2D:
   serializedVersion: 4
@@ -819,7 +820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3773016557027542647, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
       propertyPath: slideFriction
-      value: 0.992
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: 9032862247284408420, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
       propertyPath: distance
@@ -1385,7 +1386,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.771875
+  orthographic size: 4.9114585
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1877,6 +1878,11 @@ Transform:
   m_Father: {fileID: 1492239318}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &738586067 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3864644062330340879, guid: 8e433a06ca6b042c3884d951f8897bb0, type: 3}
+  m_PrefabInstance: {fileID: 2524176571610618184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &746131154
 GameObject:
   m_ObjectHideFlags: 0
@@ -9039,6 +9045,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3773016557027542647, guid: 8e433a06ca6b042c3884d951f8897bb0, type: 3}
+      propertyPath: _stepSound
+      value: 
+      objectReference: {fileID: 738586067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e433a06ca6b042c3884d951f8897bb0, type: 3}
 --- !u!1001 &5863762320551539318

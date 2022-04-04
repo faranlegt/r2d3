@@ -26,6 +26,8 @@ namespace Ld50.Characters
         public float slideFriction = 0.99f;
         public float slideSpeed = 0f;
 
+        public AudioSource _stepSound;
+
         private void Awake()
         {
             _animator = GetComponent<LineAnimator>();
@@ -33,6 +35,22 @@ namespace Ld50.Characters
             _renderer = GetComponent<SpriteRenderer>();
 
             _lastPos = _rigidbody.position;
+        }
+
+        int _lastFrame = -1;
+        public void Update()
+        {
+            var frame = _animator.animationFrame;
+            if (
+                _animator.sprites.name.Contains("Walk") &&
+                frame % 2 == 0 &&
+                _lastFrame != frame
+               )
+            {
+                _stepSound.volume = frame % 4 == 0 ? 1f : 0.5f;
+                _stepSound.Play();
+            }
+            _lastFrame = frame;
         }
 
         public void SetDirection(Vector2 d)
