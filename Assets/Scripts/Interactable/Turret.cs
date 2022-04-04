@@ -27,7 +27,7 @@ namespace Ld50.Interactable
 
         private void Awake()
         {
-            _ship = GetComponent<Ship.Ship>();
+            _ship = FindObjectOfType<Ship.Ship>();
         }
 
         public void Start()
