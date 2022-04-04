@@ -49,6 +49,7 @@ namespace Ld50.Characters
                 return;
 
             transform.position = currentTransport.transform.position;
+            currentTransport.GetCharacter().Slide();
 
             if (Input.GetKey(KeyCode.X))
             {
@@ -62,8 +63,6 @@ namespace Ld50.Characters
             {
                 currentTransport.NoAction();
             }
-
-            currentTransport.GetCharacter().Slide();
         }
 
         public void Enter(Transport transport)
