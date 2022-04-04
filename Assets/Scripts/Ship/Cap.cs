@@ -13,7 +13,7 @@ namespace Ld50.Ship
         private SpriteRenderer _renderer;
         private Collider2D _collider;
 
-        public Transform fallbackPoint;
+        public Transform fallbackPoint, explosionPoint;
 
         public Ld50.Interactable.Explosion explosionPrefab;
 
@@ -41,7 +41,7 @@ namespace Ld50.Ship
                 .Subscribe()
                 .AddTo(this);
 
-            Instantiate(explosionPrefab, _collider.transform);
+            Instantiate(explosionPrefab, explosionPoint.transform);
         }
 
         public void Fix()
