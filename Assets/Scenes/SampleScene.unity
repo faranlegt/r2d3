@@ -19874,6 +19874,7 @@ MonoBehaviour:
   - {fileID: 17198378}
   - {fileID: 140421254}
   - {fileID: 279214961}
+  gameTimeManager: {fileID: 874488484}
 --- !u!210 &1287167274
 SortingGroup:
   m_ObjectHideFlags: 0
