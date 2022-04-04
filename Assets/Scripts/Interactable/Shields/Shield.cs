@@ -24,7 +24,7 @@ namespace Ld50.Interactable.Shields
         private void Awake()
         {
             _animator = GetComponent<LineAnimator>();
-            _ship = GetComponent<Ship.Ship>();
+            _ship = FindObjectOfType<Ship.Ship>();
         }
 
         public void Brake()
@@ -48,7 +48,7 @@ namespace Ld50.Interactable.Shields
             teleporter.canTeleport = true;
             shieldAura.enabled = true;
 
-            _animator.StartLine(working, false);
+            _animator.StartLine(working, true);
         }
 
         private void Update()
