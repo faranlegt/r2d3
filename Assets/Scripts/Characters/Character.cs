@@ -20,11 +20,19 @@ namespace Ld50.Characters
         private Rigidbody2D _rigidbody;
         private SpriteRenderer _renderer;
 
+        public bool isSliding = false;
+        private Vector2 _slideDirection = Vector2.zero;
+        private Vector2 _lastPos;
+        public float slideFriction = 0.99f;
+        public float slideSpeed = 0f;
+
         private void Awake()
         {
             _animator = GetComponent<LineAnimator>();
             _rigidbody = GetComponent<Rigidbody2D>();
             _renderer = GetComponent<SpriteRenderer>();
+
+            _lastPos = _rigidbody.position;
         }
 
         public void SetDirection(Vector2 d)
@@ -53,11 +61,27 @@ namespace Ld50.Characters
                 _ => idle
             };
 
+        public void Slide()
+        {
+            if (!isSliding) return;
+
+            _slideDirection = (_rigidbody.position - _lastPos).normalized;
+
+            _rigidbody.MovePosition(
+                _rigidbody.position + _slideDirection * slideSpeed * Time.fixedDeltaTime
+            );
+            slideSpeed *= slideFriction;
+        }
+
         public void Move(Vector2 offset, float speedFactor = 1)
         {
+            _lastPos = _rigidbody.position;
+
             _rigidbody.MovePosition(
                 _rigidbody.position + offset.normalized * speedFactor * speed * Time.fixedDeltaTime
             );
+
+            slideSpeed = speed;
         }
 
         public IObservable<Unit> MoveToPoint(Vector3 endPos)

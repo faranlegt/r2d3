@@ -405,6 +405,9 @@ MonoBehaviour:
   right: {fileID: 11400000, guid: c745e9a4869bd4fff94e37dbe17169f2, type: 2}
   down: {fileID: 11400000, guid: ea3e81b458d684ce1a8c7c36553e4758, type: 2}
   jump: {fileID: 11400000, guid: 782bfb4418b84489f93ac50073c6a265, type: 2}
+  isSliding: 0
+  slideFriction: 0.98
+  slideSpeed: 0
 --- !u!50 &84040833
 Rigidbody2D:
   serializedVersion: 4
@@ -791,6 +794,14 @@ PrefabInstance:
     - target: {fileID: 2524176570728654469, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773016557027542647, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773016557027542647, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
+      propertyPath: isSliding
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e4cc34473a3845b8b3529705c049e81, type: 3}
@@ -1352,7 +1363,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4.96875
+  orthographic size: 4.9635415
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4268,6 +4279,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3396266616050797458, guid: fe244ea89fa0443a2b4480cc5eb4d257, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396266616050797458, guid: fe244ea89fa0443a2b4480cc5eb4d257, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8486612225928582439, guid: fe244ea89fa0443a2b4480cc5eb4d257, type: 3}
       propertyPath: m_Name
       value: Turret

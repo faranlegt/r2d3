@@ -29,6 +29,8 @@ namespace Ld50.Transports
             _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
+        public Character GetCharacter() => _character;
+
         public IObservable<Unit> Launch()
         {
             _animator.StartLine(launch, loop: false);

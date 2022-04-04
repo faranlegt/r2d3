@@ -76,6 +76,7 @@ namespace Ld50.Transports
         {
             actionTime = 0;
             _animator.StartLine(welding, loop: true);
+            _transport.GetCharacter().slideSpeed = 0f;
 
             foreach (var hole in holes)
             {

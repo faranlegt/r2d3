@@ -62,6 +62,8 @@ namespace Ld50.Characters
             {
                 currentTransport.NoAction();
             }
+
+            currentTransport.GetCharacter().Slide();
         }
 
         public void Enter(Transport transport)
