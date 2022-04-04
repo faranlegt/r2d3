@@ -4,12 +4,14 @@ namespace Ld50.Ship
 {
     public class Ship : MonoBehaviour
     {
-        public float brakeCoefficient = 0.001f;
+        public float brakeCoefficient = 0.003f;
         
         [Range(0, 1f)]
         public float health = 1f;
         
         public Cap[] caps;
+
+        public SpriteRenderer[] hearts;
 
         public void Update()
         {
@@ -25,6 +27,11 @@ namespace Ld50.Ship
                 {
                     caps[i].Fix();
                 }
+            }
+
+            for (var i = 0; i < hearts.Length; i++)
+            {
+                hearts[i].enabled = health >= (i + 1f) / hearts.Length || i == 0;
             }
         }
 
