@@ -20,6 +20,8 @@ namespace Ld50.Transports
         private LineAnimator _animator;
         private Transport _transport;
 
+        public AudioSource spraySound;
+
         private void Awake()
         {
             _animator = GetComponent<LineAnimator>();
@@ -47,11 +49,13 @@ namespace Ld50.Transports
 
         public void StartAction()
         {
+            spraySound.Play();
             _animator.StartLine(extinguish, loop: true);
         }
 
         public void StopAction()
         {
+            spraySound.Pause();
             _animator.StartLine(_character.idle);
         }
 

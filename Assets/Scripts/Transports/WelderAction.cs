@@ -72,8 +72,12 @@ namespace Ld50.Transports
             }
         }
 
+        public AudioSource weldSound;
+
         public void StartAction()
         {
+            weldSound.Play();
+
             actionTime = 0;
             _animator.StartLine(welding, loop: true);
             _transport.GetCharacter().slideSpeed = 0f;
@@ -86,6 +90,8 @@ namespace Ld50.Transports
 
         public void StopAction()
         {
+            weldSound.Pause();
+
             _animator.StartLine(_character.idle);
 
             foreach (var hole in holes)

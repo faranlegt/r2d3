@@ -13,6 +13,7 @@ namespace Ld50.Interactable.Shields
         public Socket nextSocket;
 
         public SpritesLine teleportIn, teleportOut;
+        public AudioSource teleportInSound, teleportOutSound;
 
         public void OnEntered(SocketController socketController) { }
 
@@ -27,6 +28,7 @@ namespace Ld50.Interactable.Shields
             isAnimating = true;
             var animator = socketController.GetComponent<LineAnimator>();
 
+            teleportOutSound.Play();
             animator
                 .LaunchOnce(teleportIn)
                 .DoOnCompleted(
@@ -35,6 +37,7 @@ namespace Ld50.Interactable.Shields
                         socketController.transform.position = nextSocket.transform.position;
                         socketController.currentSocket.PluggedOut(socketController);
 
+                        teleportInSound.Play();
                         animator
                             .LaunchOnce(teleportOut)
                             .DoOnCompleted(

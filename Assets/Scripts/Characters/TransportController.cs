@@ -21,6 +21,8 @@ namespace Ld50.Characters
 
         public AudioSource plugInSound, plugOutSound;
 
+        public SpriteRenderer hintWeld, hintExtinguish, hintExit;
+
         private void Awake()
         {
             _socket = GetComponent<SocketController>();
@@ -72,6 +74,13 @@ namespace Ld50.Characters
             isInTransport = true;
             _collider.enabled = false;
 
+            hintExit.enabled = true;
+
+            if (transport.gameObject.name == "Welder")
+                hintWeld.enabled = true;
+            else
+                hintExtinguish.enabled = true;
+
             _character
                 .Jump(transport.jumpTarget.position)
                 .DoOnCompleted(
@@ -100,6 +109,11 @@ namespace Ld50.Characters
         public void Exit()
         {
             var targetPos = currentTransport.exitJumpTarget.position;
+
+            hintExit.enabled = false;
+
+            hintWeld.enabled = false;
+            hintExtinguish.enabled = false;
 
             currentTransport
                 .Stop()

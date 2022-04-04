@@ -8,6 +8,7 @@ namespace Ld50.Hints
         public SpriteRenderer _hint;
         public float distanceToPlayer = 0;
         public float distance = 1.5f;
+        public float distanceToShow = 2f;
         public bool show = true;
 
         public void Awake()
@@ -24,7 +25,7 @@ namespace Ld50.Hints
             }
 
             distanceToPlayer = (_player.transform.position - transform.position).magnitude;
-            _hint.enabled = distanceToPlayer < 2f && InternalCondition();
+            _hint.enabled = distanceToPlayer < distanceToShow && InternalCondition();
 
             //_hint.transform.position =
             //    transform.position +
