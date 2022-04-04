@@ -9,6 +9,8 @@ namespace Ld50.Ship
         private SpriteRenderer _renderer;
         private Collider2D _collider;
 
+        public Transform fallbackPoint;
+
         private void Awake()
         {
             _renderer = GetComponent<SpriteRenderer>();
