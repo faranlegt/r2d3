@@ -48,6 +48,7 @@ namespace Ld50.Characters
                 )
                 && frame % 2 == 0
                 && _lastFrame != frame
+                && _stepSound
             )
             {
                 _stepSound.pitch = 1f + UnityEngine.Random.Range(-0.1f, 0.1f);

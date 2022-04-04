@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ld50
+namespace Ld50.Hints
 {
     public class HintOnApproach : MonoBehaviour
     {
@@ -12,19 +10,9 @@ namespace Ld50
         public float distance = 1.5f;
         public bool show = true;
 
-        public void SetSprite()
-        {
-            // Change hint sprite
-        }
-
         public void Awake()
         {
             _player = FindObjectOfType<Player>();
-        }
-
-        void Start()
-        {
-        
         }
 
         void Update()
@@ -36,7 +24,7 @@ namespace Ld50
             }
 
             distanceToPlayer = (_player.transform.position - transform.position).magnitude;
-            _hint.enabled = distanceToPlayer < 2f;
+            _hint.enabled = distanceToPlayer < 2f && InternalCondition();
 
             //_hint.transform.position =
             //    transform.position +
@@ -47,5 +35,7 @@ namespace Ld50
             _hint.transform.position =
                 transform.position + new Vector3(0, distance * (playerAbove ? 1 : -1), 0);
         }
+
+        protected virtual bool InternalCondition() => true;
     }
 }
