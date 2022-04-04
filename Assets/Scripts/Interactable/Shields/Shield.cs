@@ -48,7 +48,7 @@ namespace Ld50.Interactable.Shields
             teleporter.canTeleport = true;
             shieldAura.enabled = true;
 
-            _animator.StartLine(working, false);
+            _animator.StartLine(working, true);
         }
 
         private void Update()
