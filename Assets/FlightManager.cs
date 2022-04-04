@@ -15,11 +15,19 @@ namespace Ld50
         public Camera mainCamera;
         private Core.CameraFollower _cameraFollower;
 
+        public AudioSource explosionSound;
+
         void Start()
         {
             spaceStartPos = space.transform.position;
             _cameraFollower = mainCamera.GetComponent<Core.CameraFollower>();
             psFlow.Play();
+        }
+
+        public void ShakeCamera(int time, float strength)
+        {
+            shakeTTL = time;
+            shakeStrength = strength;
         }
 
         int shakeTTL = 0;
@@ -44,14 +52,22 @@ namespace Ld50
 
             mainCamera.transform.rotation = Quaternion.Euler(0, 0, noise1 * 10f);
 
+            if (UnityEngine.Random.Range(0, 2000) == 13)
+            {
+                explosionSound.transform.position = UnityEngine.Random.insideUnitCircle * 15;
+                explosionSound.volume = UnityEngine.Random.Range(0.1f, 0.3f);
+                explosionSound.Play();
+                ShakeCamera(40, 4);
+            }
+
             var camNoiseX = (Mathf.PerlinNoise(noiseT * 10, 0) - 0.5f) * 0.3f;
             var camNoiseY = (Mathf.PerlinNoise(0, noiseT * 10) - 0.5f) * 0.3f;
 
             if (shakeTTL > 0)
             {
                 shakeTTL--;
-                camNoiseX += UnityEngine.Random.Range(0, shakeStrength);
-                camNoiseY += UnityEngine.Random.Range(0, shakeStrength);
+                camNoiseX += UnityEngine.Random.Range(-shakeStrength, shakeStrength);
+                camNoiseY += UnityEngine.Random.Range(-shakeStrength, shakeStrength);
             }
 
             _cameraFollower.offset = new Vector3(camNoiseX, camNoiseY, -10);
