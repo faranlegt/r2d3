@@ -36,7 +36,11 @@ namespace Ld50.Core
         {
             if (gameTimeManager.isPlaying && _playingFactor < 1f)
             {
-                _playingFactor += 0.01f;
+                _playingFactor += Time.deltaTime;
+            }
+            else if (!gameTimeManager.isPlaying && _playingFactor > 0)
+            {
+                _playingFactor -= Time.deltaTime;
             }
 
             noiseT += 0.003f;

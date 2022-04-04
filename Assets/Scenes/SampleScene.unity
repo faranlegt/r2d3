@@ -431,7 +431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84040826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 35, z: 0}
+  m_LocalPosition: {x: 5.76, y: -2.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13078,7 +13078,7 @@ MonoBehaviour:
   player: {fileID: 84040830}
   gameStartPos: {fileID: 1558367128}
   gameEndPos: {fileID: 1564005341}
-  startDuration: 2
+  startDuration: 0.5
   isPlaying: 0
   gameStarting: 0
   gameOver: 0
