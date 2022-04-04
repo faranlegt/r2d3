@@ -38,17 +38,17 @@ namespace Ld50.Characters
         }
 
         int _lastFrame = -1;
+
         public void Update()
         {
             var frame = _animator.animationFrame;
             if (
                 (
-                    _animator.sprites.name.Contains("Walk") ||
-                    _animator.sprites.name.Contains("Run")
-                ) &&
-                frame % 2 == 0 &&
-                _lastFrame != frame
-               )
+                    _animator.sprites.name.Contains("Walk") || _animator.sprites.name.Contains("Run")
+                )
+                && frame % 2 == 0
+                && _lastFrame != frame
+            )
             {
                 _stepSound.pitch = 1f + UnityEngine.Random.Range(-0.1f, 0.1f);
                 _stepSound.volume = frame % 4 == 0 ? 0.7f : 0.4f;
@@ -85,7 +85,8 @@ namespace Ld50.Characters
 
         public void Slide()
         {
-            if (!isSliding) return;
+            if (!isSliding)
+                return;
 
             _slideDirection = (_rigidbody.position - _lastPos).normalized;
 
@@ -97,10 +98,11 @@ namespace Ld50.Characters
 
         public void Move(Vector2 offset, float speedFactor = 1)
         {
-            _lastPos = _rigidbody.position;
+            var position = _rigidbody.position;
+            _lastPos = position;
 
             _rigidbody.MovePosition(
-                _rigidbody.position + offset.normalized * speedFactor * speed * Time.fixedDeltaTime
+                position + offset.normalized * speedFactor * speed * Time.fixedDeltaTime
             );
 
             slideSpeed = speed;
@@ -155,7 +157,7 @@ namespace Ld50.Characters
                     () =>
                     {
                         isAutoMoving = false;
-                        _renderer.sortingOrder = oldSortLayer; 
+                        _renderer.sortingOrder = oldSortLayer;
                     }
                 )
                 .AsUnitObservable();

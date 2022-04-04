@@ -1,16 +1,23 @@
 using System;
 using System.Collections.Generic;
+using Ld50.Characters;
 using Ld50.Interactable;
 using Ld50.Interactable.Shields;
+using UniRx;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Ld50.Core
 {
-
     public class GameTimeManager : MonoBehaviour
     {
-        FlightManager FlightManager;
+        public PlayerMovement player;
+
+        public Transform gameStartPos;
+
+        public float startDuration = 5f;
+
+        public bool isPlaying, gameStarting;
 
         public Camera playerCamera;
 
@@ -66,6 +73,18 @@ namespace Ld50.Core
 
         private void Update()
         {
+            if (isPlaying)
+            {
+                SpawnEvents();
+            }
+            else
+            {
+                WaitForGameStart();
+            }
+        }
+
+        private void SpawnEvents()
+        {
             var e = Random.value;
 
             foreach (var callback in _callbacks)
@@ -78,6 +97,39 @@ namespace Ld50.Core
 
                 e -= callback.Frequency;
             }
+        }
+
+        private void WaitForGameStart()
+        {
+            if (!Input.anyKey || gameStarting)
+                return;
+
+            gameStarting = true;
+
+            var startPos = player.transform.position;
+            var t = 0f;
+
+            Observable
+                .EveryUpdate()
+                .TakeUntil(Observable.Timer(TimeSpan.FromSeconds(startDuration)))
+                .Do(
+                    _ =>
+                    {
+                        player.transform.position = Vector3.Lerp(startPos, gameStartPos.position, t / startDuration);
+                        t += Time.deltaTime;
+                    }
+                )
+                .DoOnCompleted(
+                    () =>
+                    {
+                        player.transform.position = gameStartPos.position;
+                        player.GetComponent<Collider2D>().enabled = true;
+                        isPlaying = true;
+                        gameStarting = false;
+                    }
+                )
+                .Subscribe()
+                .AddTo(this);
         }
 
         [Serializable]

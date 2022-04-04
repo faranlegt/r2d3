@@ -1,3 +1,4 @@
+using Ld50.Core;
 using UnityEngine;
 
 namespace Ld50.Characters
@@ -13,16 +14,22 @@ namespace Ld50.Characters
         private TransportController _transportController;
         private SocketController _socket;
 
+        private GameTimeManager _gameTimeManager;
 
         private void Awake()
         {
             _socket = GetComponent<SocketController>();
             _player = GetComponent<Character>();
             _transportController = GetComponent<TransportController>();
+
+            _gameTimeManager = FindObjectOfType<GameTimeManager>();
         }
 
         private void Update()
         {
+            if (!_gameTimeManager.isPlaying)
+                return;
+
             if (_player.isAutoMoving
                 || _socket.isInSocket
                 || (_transportController.isInTransport && !_transportController.canMove))
