@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ld50
+namespace Ld50.Core
 {
     public class FlightManager : MonoBehaviour
     {
@@ -16,6 +16,8 @@ namespace Ld50
         private Core.CameraFollower _cameraFollower;
 
         public AudioSource explosionSound;
+        public GameTimeManager gameTimeManager;
+        private float _playingFactor = 0f;
 
         void Start()
         {
@@ -34,11 +36,20 @@ namespace Ld50
         float shakeStrength = 0;
         void Update()
         {
+            if (gameTimeManager.isPlaying && _playingFactor < 1f)
+            {
+                _playingFactor += 0.01f;
+            }
+
             noiseT += 0.003f;
 
             var noise1 = Mathf.PerlinNoise(noiseT, 0) - 0.5f;
             var noise2 = Mathf.PerlinNoise(0, noiseT) - 0.5f;
             var noise3 = Mathf.PerlinNoise(noiseT, noiseT) - 0.5f;
+
+            noise1 *= _playingFactor;
+            noise2 *= _playingFactor;
+            noise3 *= _playingFactor;
 
             //space.transform.SetPositionAndRotation(
             //    spaceStartPos +- new Vector3(noise2, noise3) * 20f,
@@ -52,7 +63,7 @@ namespace Ld50
 
             mainCamera.transform.rotation = Quaternion.Euler(0, 0, noise1 * 10f);
 
-            if (UnityEngine.Random.Range(0, 2000) == 13)
+            if (UnityEngine.Random.Range(0, 2000) == 13 && gameTimeManager.isPlaying)
             {
                 explosionSound.transform.position = UnityEngine.Random.insideUnitCircle * 15;
                 explosionSound.volume = UnityEngine.Random.Range(0.1f, 0.3f);

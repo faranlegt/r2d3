@@ -15,6 +15,8 @@ namespace Ld50.Ship
 
         public Transform fallbackPoint;
 
+        public Ld50.Interactable.Explosion explosionPrefab;
+
         private void Awake()
         {
             _renderer = GetComponent<SpriteRenderer>();
@@ -38,6 +40,8 @@ namespace Ld50.Ship
                 .Do(c => c.transform.position = fallbackPoint.position)
                 .Subscribe()
                 .AddTo(this);
+
+            Instantiate(explosionPrefab, _collider.transform);
         }
 
         public void Fix()
