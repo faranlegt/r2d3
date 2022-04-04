@@ -115,7 +115,7 @@ namespace Ld50.Core
                                 t += Time.deltaTime;
                             }
                         )
-                        .DoOnCompleted(() => waitRestart = true)
+                        .DoOnCompleted(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name))
                         .Subscribe()
                         .AddTo(this);
                 }
