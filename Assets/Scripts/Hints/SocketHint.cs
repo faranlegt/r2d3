@@ -6,10 +6,6 @@ namespace Ld50.Hints
     {
         public Ld50.Interactable.Sockets.Socket socket;
 
-        public void Start()
-        {
-            
-        }
 
         protected override bool InternalCondition() => !socket.owner;
     }
