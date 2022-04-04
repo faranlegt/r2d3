@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.neuecc.unirx": "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts",
+    "com.omiyagames.embedwebgltemplate": "https://github.com/OmiyaGames/omiya-games-embed-webgl-template.git",
     "com.svermeulen.extenject": "https://github.com/Mathijs-Bakker/Extenject.git?path=UnityProject/Assets/Plugins/Zenject/Source#9.3.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "1.15.13",
