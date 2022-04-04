@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: BallJumpYellow
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 533967450, guid: b60dca8e2ac274c2ab1e51a5f2e164d0, type: 3}
+  - {fileID: -1288375190, guid: b60dca8e2ac274c2ab1e51a5f2e164d0, type: 3}
+  - {fileID: 2055660431, guid: b60dca8e2ac274c2ab1e51a5f2e164d0, type: 3}
+  - {fileID: -723857012, guid: b60dca8e2ac274c2ab1e51a5f2e164d0, type: 3}
+  - {fileID: -1652858510, guid: b60dca8e2ac274c2ab1e51a5f2e164d0, type: 3}
+  - {fileID: -720644751, guid: b60dca8e2ac274c2ab1e51a5f2e164d0, type: 3}
+  - {fileID: -246449243, guid: b60dca8e2ac274c2ab1e51a5f2e164d0, type: 3}
+  - {fileID: -78460416, guid: b60dca8e2ac274c2ab1e51a5f2e164d0, type: 3}

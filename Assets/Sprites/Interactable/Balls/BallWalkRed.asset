@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: BallWalkRed
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -850070634, guid: 22986667aa415434f985b46b610e50f6, type: 3}
+  - {fileID: 423708904, guid: 22986667aa415434f985b46b610e50f6, type: 3}
+  - {fileID: 542727371, guid: 22986667aa415434f985b46b610e50f6, type: 3}
+  - {fileID: 496783327, guid: 22986667aa415434f985b46b610e50f6, type: 3}
+  - {fileID: -1964869167, guid: 22986667aa415434f985b46b610e50f6, type: 3}
+  - {fileID: -2146616219, guid: 22986667aa415434f985b46b610e50f6, type: 3}
+  - {fileID: -962191090, guid: 22986667aa415434f985b46b610e50f6, type: 3}
+  - {fileID: -1132611767, guid: 22986667aa415434f985b46b610e50f6, type: 3}

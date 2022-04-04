@@ -42,10 +42,10 @@ namespace Ld50
 
             mainCamera.transform.rotation = Quaternion.Euler(0, 0, noise1 * 10f);
 
-            var camOffsetX = (Mathf.PerlinNoise(noiseT * 7, 0) - 0.5f) * 0.5f;
-            var camOffsetY = (Mathf.PerlinNoise(0, noiseT * 7) - 0.5f) * 0.5f;
+            var camNoiseX = (Mathf.PerlinNoise(noiseT * 10, 0) - 0.5f) * 0.3f;
+            var camNoiseY = (Mathf.PerlinNoise(0, noiseT * 10) - 0.5f) * 0.3f;
 
-            _cameraFollower.offset = new Vector3(camOffsetX, camOffsetY, -10);
+            _cameraFollower.offset = new Vector3(camNoiseX, camNoiseY, -10);
             
         }
     }

@@ -24,6 +24,7 @@ namespace Ld50.Interactable
 
         public bool IsBroken => !isWorking;
 
+        private float _noiseT = 0f;
 
         private void Awake()
         {
@@ -45,6 +46,12 @@ namespace Ld50.Interactable
 
         private void Shoot()
         {
+            Observable
+                .Timer(TimeSpan.FromSeconds(5 / 60f))
+                .DoOnCompleted(() => Instantiate(laserPrefab, laserStart.position, laserStart.rotation))
+                .Subscribe()
+                .AddTo(this);
+            
             towerAnimator
                 .LaunchOnce(shoot)
                 .DoOnCompleted(
@@ -53,8 +60,6 @@ namespace Ld50.Interactable
                 .Subscribe(
                     _ =>
                     {
-                        Instantiate(laserPrefab, laserStart.position, laserStart.rotation);
-
                         towerAnimator.StartLine(idle, true);
                     }
                 )
@@ -66,7 +71,9 @@ namespace Ld50.Interactable
         {
             if (isWorking)
             {
-                tower.rotation = Quaternion.Euler(0, 0, Mathf.Sin(Time.time * period) * 30f);
+                _noiseT += 0.007f;
+                var noise = Mathf.PerlinNoise(_noiseT, 0) - 0.5f;
+                tower.rotation = Quaternion.Euler(0, 0, noise * 120f);
             }
             else
             {

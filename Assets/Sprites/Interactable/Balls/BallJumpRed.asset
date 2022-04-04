@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: BallJumpRed
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1688530405, guid: d4464648662f44775801e9a524e56793, type: 3}
+  - {fileID: 1535671170, guid: d4464648662f44775801e9a524e56793, type: 3}
+  - {fileID: -301052515, guid: d4464648662f44775801e9a524e56793, type: 3}
+  - {fileID: 1277193904, guid: d4464648662f44775801e9a524e56793, type: 3}
+  - {fileID: 504256365, guid: d4464648662f44775801e9a524e56793, type: 3}
+  - {fileID: -600638223, guid: d4464648662f44775801e9a524e56793, type: 3}
+  - {fileID: -1466560927, guid: d4464648662f44775801e9a524e56793, type: 3}
+  - {fileID: 8960509, guid: d4464648662f44775801e9a524e56793, type: 3}

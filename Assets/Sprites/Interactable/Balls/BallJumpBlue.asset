@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: BallJumpBlue
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 863691657, guid: 112e4afa479344412bbd036d86be146d, type: 3}
+  - {fileID: 1346887791, guid: 112e4afa479344412bbd036d86be146d, type: 3}
+  - {fileID: -410189851, guid: 112e4afa479344412bbd036d86be146d, type: 3}
+  - {fileID: -396265936, guid: 112e4afa479344412bbd036d86be146d, type: 3}
+  - {fileID: -1282645706, guid: 112e4afa479344412bbd036d86be146d, type: 3}
+  - {fileID: 1223618914, guid: 112e4afa479344412bbd036d86be146d, type: 3}
+  - {fileID: -1291671054, guid: 112e4afa479344412bbd036d86be146d, type: 3}
+  - {fileID: -766505383, guid: 112e4afa479344412bbd036d86be146d, type: 3}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: BallIdleYellow
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1511590930, guid: f2a5b33fe83854c4a86423a65aa3d1cc, type: 3}
+  - {fileID: 2102078438, guid: f2a5b33fe83854c4a86423a65aa3d1cc, type: 3}
+  - {fileID: 1096834102, guid: f2a5b33fe83854c4a86423a65aa3d1cc, type: 3}
+  - {fileID: 1710207303, guid: f2a5b33fe83854c4a86423a65aa3d1cc, type: 3}
+  - {fileID: -393301261, guid: f2a5b33fe83854c4a86423a65aa3d1cc, type: 3}
+  - {fileID: 657022217, guid: f2a5b33fe83854c4a86423a65aa3d1cc, type: 3}
+  - {fileID: 1325775673, guid: f2a5b33fe83854c4a86423a65aa3d1cc, type: 3}
+  - {fileID: 255655700, guid: f2a5b33fe83854c4a86423a65aa3d1cc, type: 3}

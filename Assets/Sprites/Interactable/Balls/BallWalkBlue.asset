@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91416d9bc9754b84918a9e518f6584e, type: 3}
+  m_Name: BallWalkBlue
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1775390988, guid: 703237013564c4d6baf3383de824f68d, type: 3}
+  - {fileID: 1433546998, guid: 703237013564c4d6baf3383de824f68d, type: 3}
+  - {fileID: 336867992, guid: 703237013564c4d6baf3383de824f68d, type: 3}
+  - {fileID: 724630540, guid: 703237013564c4d6baf3383de824f68d, type: 3}
+  - {fileID: 1419879755, guid: 703237013564c4d6baf3383de824f68d, type: 3}
+  - {fileID: -2102885806, guid: 703237013564c4d6baf3383de824f68d, type: 3}
+  - {fileID: -797399645, guid: 703237013564c4d6baf3383de824f68d, type: 3}
+  - {fileID: -1583890924, guid: 703237013564c4d6baf3383de824f68d, type: 3}
