@@ -13,6 +13,8 @@ namespace Ld50.Ship
 
         public SpriteRenderer[] hearts;
 
+        public Ld50.Core.GameTimeManager gameTimeManager;
+
         public void Update()
         {
             var brokenCount = Mathf.FloorToInt((1 - health) * caps.Length);
@@ -31,7 +33,9 @@ namespace Ld50.Ship
 
             for (var i = 0; i < hearts.Length; i++)
             {
-                hearts[i].enabled = health >= (i + 1f) / hearts.Length || i == 0;
+                hearts[i].enabled =
+                    gameTimeManager.isPlaying && 
+                    (health >= (i + 1f) / hearts.Length || i == 0);
             }
         }
 
