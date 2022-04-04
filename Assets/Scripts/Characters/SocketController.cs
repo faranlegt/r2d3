@@ -46,6 +46,8 @@ namespace Ld50.Characters
             if (!canPowerUp)
                 return;
 
+            transform.position = currentSocket.transform.position;
+
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 currentSocket.PowerUp(this);
