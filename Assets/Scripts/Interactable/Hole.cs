@@ -1,5 +1,6 @@
 using System;
 using Ld50.Animations;
+using Ld50.Hints;
 using UnityEngine;
 
 namespace Ld50.Interactable
@@ -49,6 +50,8 @@ namespace Ld50.Interactable
             
             isBroken = false;
             _animator.StartLine(repaired);
+
+            GetComponentInChildren<TransportRequiredHint>().show = false;
         }
     }
 }

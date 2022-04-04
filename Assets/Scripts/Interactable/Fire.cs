@@ -1,4 +1,5 @@
 using System;
+using Ld50.Hints;
 using UnityEngine;
 
 namespace Ld50.Interactable
@@ -36,6 +37,8 @@ namespace Ld50.Interactable
             if (life <= 0)
             {
                 isBroken = false;
+
+                GetComponentInChildren<TransportRequiredHint>().show = false;
                 Destroy(fire.gameObject);
             } 
         }
