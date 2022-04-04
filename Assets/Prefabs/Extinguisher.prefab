@@ -202,6 +202,7 @@ MonoBehaviour:
   slideFriction: 0.99
   slideSpeed: 0
   _stepSound: {fileID: 0}
+  jumpSound: {fileID: 0}
 --- !u!58 &2746691264696271489
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -215,9 +216,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.33}
   serializedVersion: 2
-  m_Radius: 1.75
+  m_Radius: 1
 --- !u!61 &7059204373892768533
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -524,4 +525,5 @@ MonoBehaviour:
   _hint: {fileID: 7899034115025758155}
   distanceToPlayer: 0
   distance: 1.5
+  distanceToShow: 1
   show: 1

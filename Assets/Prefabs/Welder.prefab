@@ -218,9 +218,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.39}
   serializedVersion: 2
-  m_Radius: 1.75
+  m_Radius: 1.07
 --- !u!61 &7059204373892768533
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -527,4 +527,5 @@ MonoBehaviour:
   _hint: {fileID: 8658579207015438331}
   distanceToPlayer: 0
   distance: 1.5
+  distanceToShow: 1
   show: 1
