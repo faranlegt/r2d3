@@ -7,8 +7,11 @@ using Random = UnityEngine.Random;
 
 namespace Ld50.Core
 {
+
     public class GameTimeManager : MonoBehaviour
     {
+        FlightManager FlightManager;
+
         public Camera playerCamera;
 
         public Fire firePrefab;
